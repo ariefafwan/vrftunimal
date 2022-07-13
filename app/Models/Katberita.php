@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Katberita extends Model
 {
     use HasFactory;
+
+    public function produk()
+    {
+        return $this->hasMany(Berita::class);
+    }
 }

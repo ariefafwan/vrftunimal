@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Berita extends Model
 {
     use HasFactory;
+
+    public function katberita()
+    {
+        return $this->belongsTo(Katberita::class);
+    }
 }
