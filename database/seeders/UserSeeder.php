@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
     {
         User::create([
             'name' => 'Administrator',
-            'email' => 'administrator@ft-unimal.com',
+            'email' => 'administrator@unimal.ac.id',
             'role_id' => '1',
             'email_verified_at' => '2022-07-07 19:55:59',
             'password' => Hash::make('password')
