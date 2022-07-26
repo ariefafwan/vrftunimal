@@ -6,13 +6,13 @@
                 <span class="ml-2">Dashboard</span>
             </a>
         </li>
-        {{-- <li class="nav-item">
-            <a class="nav-link " href="{{ route('admin.create') }}">
+        <li class="nav-item">
+            <a class="nav-link " href="{{ route('berita.index') }}">
                 <i data-feather="users"></i>
-                <span class="ml-2">Users</span>
+                <span class="ml-2">Berita</span>
             </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link" href="{{ route('result.index') }}">
                 <i data-feather="file"></i>
                 <span class="ml-2">Result</span>

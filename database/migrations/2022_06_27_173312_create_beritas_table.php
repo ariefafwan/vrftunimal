@@ -15,9 +15,17 @@ class CreateBeritasTable extends Migration
     {
         Schema::create('beritas', function (Blueprint $table) {
             $table->id();
-            $table->string('berita');
+            $table->string('title');
+            $table->string('slug');
+            $table->text('details');
+            $table->string('image');
             $table->bigInteger('prodi_id')->unsigned();
             $table->foreign('prodi_id')->references('id')->on('prodis')->onDelete('cascade')->onUpdate('cascade');
+            $table->bigInteger('katberita_id')->unsigned();
+            $table->foreign('katberita_id')->references('id')->on('katberitas')->onDelete('cascade')->onUpdate('cascade');
+            $table->boolean('status');
+            $table->boolean('featured');
+            $table->integer('view_count')->default(0);
             $table->timestamps();
         });
     }

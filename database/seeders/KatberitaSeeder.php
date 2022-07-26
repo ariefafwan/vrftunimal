@@ -16,13 +16,24 @@ class KatberitaSeeder extends Seeder
     public function run()
     {
         Katberita::Create([
-            'name' => 'akademik'
+            'name' => 'akademik',
+            'slug' => 'akademik',
+            'status' => '1',
+            'image' => 'afwan.jpg'
         ]);
+
         Katberita::Create([
-            'name' => 'mahasiswa'
+            'name' => 'mahasiswa',
+            'slug' => 'mahasiswa',
+            'status' => '1',
+            'image' => 'afwan.jpg'
         ]);
+
         Katberita::Create([
-            'name' => 'teknik'
+            'name' => 'teknik',
+            'slug' => 'teknik',
+            'status' => '1',
+            'image' => 'afwan.jpg'
         ]);
     }
 }
