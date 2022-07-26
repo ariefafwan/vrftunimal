@@ -9,7 +9,7 @@ class Katberita extends Model
 {
     use HasFactory;
 
-    public function produk()
+    public function berita()
     {
         return $this->hasMany(Berita::class);
     }

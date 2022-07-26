@@ -11,22 +11,24 @@
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-192x192.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+  <link rel="manifest" href="favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -51,16 +53,24 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Arsha</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <div class="header-kiri col-md-1 col-sm-2 col-xs-1">
+        <a href="https://teknik.unimal.ac.id/"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
+      </div>
+      <div class="header-tengah col-md-3 col-sm-6 col-xs-10">
+        <h1 class="judul-web text-white">Fakultas Teknik</h1>
+        <h4 class="deskripsi-web text-white">Universitas Malikussaleh</h4>
+      </div>
+      {{-- <img class="logo col-md-12 col-xs-12" src="unimalpng.png" alt="" class="img-fluid">
+      <a class="row"><h1 class="text-white">Fakultas Teknik</h1>
+      <h3 class="text-white">Universitas Malikussaleh</h3></a> --}}
+      {{-- <img class="logo col-md-12 col-xs-12"> --}}
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link   scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
