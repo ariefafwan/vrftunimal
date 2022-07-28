@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Dosen;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class DosenController extends Controller
+class ProdiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class DosenController extends Controller
      */
     public function index()
     {
-        $page   = "Seluruh Dosen";
-        $dosen  = Dosen::all();
-        return view('admin.dosen.dosen', compact('page', 'dosen'));
+        $page   = "Seluruh Prodi";
+        $prodi  = Prodi::all();
+        return view('admin.prodi.prodi', compact('page', 'prodi'));
     }
 
     /**
@@ -27,7 +27,9 @@ class DosenController extends Controller
      */
     public function create()
     {
-        //
+        $page   = "Tambah Prodi";
+        $prodi  = Prodi::all();
+        return view('admin.prodi.cprodi', compact('page', 'prodi'));
     }
 
     /**
@@ -38,7 +40,13 @@ class DosenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $dtUpload = new Prodi();
+        $dtUpload->name = $request->name;
+
+        $dtUpload->save();
+
+        return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
     }
 
     /**
@@ -60,7 +68,10 @@ class DosenController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prodi  = Prodi::findOrFail($id);
+        $page   = "Edit Kategori Berita";
+
+        return view('admin.prodi.eprodi', compact('prodi', 'page'));
     }
 
     /**
@@ -72,7 +83,12 @@ class DosenController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $dtUpload = Prodi::find($id);
+        $dtUpload->name = $request->name;
+
+        $dtUpload->save();
+
+        return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
     }
 
     /**
@@ -83,6 +99,10 @@ class DosenController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $prodi = Prodi::findOrFail($id);
+
+        $prodi->delete();
+
+        return back()->with(['message' => 'News deleted successfully!']);
     }
 }
