@@ -10,9 +10,10 @@
 
 <section class="content">
     <div class="row">
-        <h6>
-            <small><a href="{{ route('berita.create') }}" class="btn btn-block btn-xs btn-success btn-flat"><i class="fa fa-plus"></i> CREATE NEW</a></small>
-        </h6>
+        <div class="box-footer mb-3">
+            <a href="{{ route('berita.create') }}" class="btn btn-primary"><i data-feather="plus"></i> CREATE NEW</a>
+            <a href="{{ route('katberita.index') }}" class="btn btn-success"><i data-feather="eye"></i> SEE ALL KATEGORI</a>
+        </div>
         <div class="col-xs-12">
             <div class="box">
                 {{-- <div class="box-header">
@@ -24,15 +25,15 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Image</th>
-                                <th>Title</th>
+                                <th>Gambar</th>
+                                <th>Judul</th>
                                 <th>Prodi</th>
-                                <th>Details</th>
-                                <th>Category</th>
+                                <th>Detail</th>
+                                <th>Kategori</th>
                                 <th>Status</th>
-                                <th>Is Featured</th>
+                                <th>Unggulan</th>
                                 <th>View</th>
-                                <th>Action</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
 
@@ -45,7 +46,7 @@
                                 </td>
                                 <td>{{ $news->title }}</td>
                                 <td>{{ $news->prodi->name }}</td>
-                                <td>{{ Str::limit(strip_tags($news->details),300) }}</td>
+                                <td>{{ Str::limit(strip_tags($news->details),30) }}</td>
                                 <td>{{ $news->katberita->name }}</td>
                                 <td>{{ $news->status ? 'Published' : 'Unpublished' }}</td>
                                 <td>{{ $news->featured ? 'Featured' : '' }}</td>
@@ -73,15 +74,15 @@
                         <tfoot>
                             <tr>
                                 <th>ID</th>
-                                <th>Image</th>
-                                <th>Title</th>
+                                <th>Gambar</th>
+                                <th>Judul</th>
                                 <th>Prodi</th>
-                                <th>Details</th>
-                                <th>Category</th>
+                                <th>Detail</th>
+                                <th>Kategori</th>
                                 <th>Status</th>
-                                <th>Is Featured</th>
+                                <th>Unggulan</th>
                                 <th>View</th>
-                                <th>Action</th>
+                                <th>Aksi</th>
                             </tr>
                         </tfoot>
                     </table>

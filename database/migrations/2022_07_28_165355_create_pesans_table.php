@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKatberitasTable extends Migration
+class CreatePesansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,8 @@ class CreateKatberitasTable extends Migration
      */
     public function up()
     {
-        Schema::create('katberitas', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('slug');
-            $table->string('image')->nullable();
-            $table->boolean('status');
+        Schema::create('pesans', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -30,6 +26,6 @@ class CreateKatberitasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('katberitas');
+        Schema::dropIfExists('pesans');
     }
 }
