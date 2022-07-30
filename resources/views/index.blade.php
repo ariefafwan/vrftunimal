@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Baker Bootstrap Template - Index</title>
+  <title>Fakultas Teknik - UNIMAL</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -66,30 +66,115 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+          <li class="dropdown"><a href="#"><span>Profil</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Sejarah</a></li>
+              <li><a href="#">Visi Misi</a></li>
+              <li><a href="#">Struktur Organisasi</a></li>
+              <li><a href="#">Profil Pimpinan Fakultas</a></li>
+              <li><a href="#">Fasilitas Penunjang</a></li>
+              <li><a href="#">Prestasi</a></li>
+              <li><a href="#">Dosen</a></li>
+              <li><a href="#">Tenaga Kependidikan</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="dropdown"><a href="#"><span>Jurusan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Sipil</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">Prodi Teknik Sipil</a></li>
+                  <li><a href="#">Prodi Teknik Arsitektur</a></li>
+                  <li><a href="#">Prodi Magister Teknik Sipil</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Mesin</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">Prodi Teknik Mesin</a></li>
+                  <li><a href="#">Prodi Magister Teknik Energi Tebarukan</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Industri</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">Prodi Teknik Industri</a></li>
+                  <li><a href="#">Prodi Teknik Logistik</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Kimia</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">Prodi Teknik Kimia</a></li>
+                  <li><a href="#">Prodi Teknik Material</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Elektro</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">Prodi Teknik Elektro</a></li>
+                  <li><a href="#">Prodi Sistem Informasi</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Informatika</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">Prodi Teknik Informatika</a></li>
+                  <li><a href="#">Prodi Magister Teknologi Informasi</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Akademik</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="#">Informasi Akademik</a></li>
+              <li class="dropdown"><a href="#"><span>Penelitian & Pengabdian</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">LPPM</a></li>
+                  <li><a href="#">Penelitian</a></li>
+                  <li><a href="#">Pengabdian</a></li>
+                  <li><a href="#">HaKI</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Daftar Yudisium</a></li>
+              <li><a href="#">Kebijakan Akademik</a></li>
+              <li><a href="#">Panduan Akademik</a></li>
+              <li><a href="#">Akreditasi</a></li>
+              <li><a href="#">Informasi Umum</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Layanan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="#">SIA</a></li>
+              <li><a href="#">E-Learning</a></li>
+              <li><a href="#">E-Library</a></li>
+              <li><a href="#">SIMPEG</a></li>
+              <li><a href="#">PORTAL</a></li>
+              <li><a href="#">Survey UNIMAL</a></li>
+              <li><a href="#">Layanan Kemahasiswaan</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Kemahasiswaan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="#">Kampus Merdeka</a></li>
+              <li class="dropdown"><a href="#"><span>Organisasi Mahasiswa</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">BEM FT UNIMAL</a></li>
+                  <li><a href="#">DPM FT UNIMAL</a></li>
+                  <li><a href="#">HIMATESIP</a></li>
+                  <li><a href="#">HIMATESIN</a></li>
+                  <li><a href="#">HIMTI</a></li>
+                  <li><a href="#">HIMATEMIA</a></li>
+                  <li><a href="#">HIMATRO</a></li>
+                  <li><a href="#">HIMATEKA</a></li>
+                  <li><a href="#">HIMATIF</a></li>
+                  <li><a href="#">HIMASI</a></li>
+                  <li><a href="#">HIMATERIAL</a></li>
+                  <li><a href="#">Teknik Logistik</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Alumni</a></li>
+              <li><a href="#">Data Mahasiswa</a></li>
+              <li><a href="#">Prestasi Mahasiswa</a></li>
+              <li><a href="#">Kegiatan Mahasiswa</a></li>
+            </ul>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -102,7 +187,7 @@
     <div class="container position-relative">
       <h1>Selamat Datang</h1>
       <h2>Fakultas Teknik Universitas Malikussaleh</h2>
-      <a href="" class="btn-get-started mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Start VR Tour</a>
+      <a href="" class="btn-get-started mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
       {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="btn-watch-started"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
     </div>
   </section><!-- End Hero -->
@@ -112,31 +197,59 @@
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients section-bg">
       <div class="container">
+        <div class="section-title text-primary">
+          <h2>Kerja Sama</h2>
+        </div>
 
         <div class="row">
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          {{-- <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"> --}}
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+              <a target="_blank" href="http://acehprov.go.id/">
+                  <img src="https://teknik.unimal.ac.id/assets/logo/lg_ks_1.png">
+              </a>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+              <a target="_blank" href="http://www.undip.ac.id/">
+                  <img src="https://teknik.unimal.ac.id/assets/logo/lg_ks_2.png">
+              </a>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+            <a target="_blank" href="http://unsyiah.ac.id/">
+                  <img src="https://teknik.unimal.ac.id/assets/logo/lg_ks_3.png">
+            </a>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+            <a target="_blank" href="http://www.usu.ac.id/">
+                <img src="https://teknik.unimal.ac.id/assets/logo/lg_ks_4.png">
+            </a>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+            <a target="_blank" href="http://www.ukm.my/">
+                <img src="https://teknik.unimal.ac.id/assets/logo/lg_ks_5.png">
+            </a>
           </div>
 
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+            <a target="_blank" href="http://www.pertamina.com/news-room/seputar-energi/peralihan-operasi-pt-arun-ngl-menjadi-pt-perta-arun-gas-(1)/">
+                <img src="https://teknik.unimal.ac.id/assets/logo/lg_ks_6.png">
+            </a>
+          </div>
+
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+            <a target="_blank" href="http://pupuk-indonesia.com/">
+                <img src="https://teknik.unimal.ac.id/assets/logo/lg_ks_7.png">
+            </a>
+          </div>
+        
+          <div class="col-md-3 col-xs-2 align-items-center justify-content-center">
+            <a target="_blank" href="http://www.perpusnas.go.id/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/LOGO-PERPUSNAS.svg/800px-LOGO-PERPUSNAS.svg.png">
+            </a>
           </div>
 
         </div>
@@ -144,73 +257,11 @@
       </div>
     </section><!-- End Clients Section -->
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <h3>Voluptatem dignissimos provident quasi</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-            </p>
-            <div class="row">
-              <div class="col-md-6">
-                <i class="bx bx-receipt"></i>
-                <h4>Corporis voluptates sit</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-              <div class="col-md-6">
-                <i class="bx bx-cube-alt"></i>
-                <h4>Ullamco laboris nisi</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts section-bg">
-      <div class="container">
-
-        <div class="row counters">
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
-
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hard Workers</p>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title text-primary">
           <h2>Services</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
@@ -284,22 +335,13 @@
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
-      <div class="container">
-
-        <div class="text-center">
-          <h3>Call To Action</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
-        </div>
-
-      </div>
     </section><!-- End Cta Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container">
 
-        <div class="section-title">
+        <div class="section-title text-primary">
           <h2>Testimonials</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
@@ -383,7 +425,7 @@
     <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
   
-          <div class="section-title">
+          <div class="section-title text-primary">
             <h2>Team</h2>
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
@@ -462,134 +504,12 @@
   
         </div>
       </section><!-- End Team Section -->
-       <!-- ======= Pricing Section ======= -->
-       <section id="pricing" class="pricing">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Pricing</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="box">
-                <h3>Free Plan</h3>
-                <h4><sup>$</sup>0<span>per month</span></h4>
-                <ul>
-                  <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                  <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                  <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                  <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                  <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                </ul>
-                <a href="#" class="buy-btn">Get Started</a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-              <div class="box featured">
-                <h3>Business Plan</h3>
-                <h4><sup>$</sup>29<span>per month</span></h4>
-                <ul>
-                  <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                  <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                  <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                  <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-                  <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-                </ul>
-                <a href="#" class="buy-btn">Get Started</a>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-              <div class="box">
-                <h3>Developer Plan</h3>
-                <h4><sup>$</sup>49<span>per month</span></h4>
-                <ul>
-                  <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                  <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                  <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                  <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-                  <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-                </ul>
-                <a href="#" class="buy-btn">Get Started</a>
-              </div>
-            </div>
-  
-          </div>
-  
-        </div>
-      </section><!-- End Pricing Section -->
-  
-      <!-- ======= Frequently Asked Questions Section ======= -->
-      <section id="faq" class="faq section-bg">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Frequently Asked Questions</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-          </div>
-  
-          <div class="faq-list">
-            <ul>
-              <li data-aos="fade-up" data-aos-delay="100">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-                  <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                  </p>
-                </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="200">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="300">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                  </p>
-                </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="400">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in.
-                  </p>
-                </div>
-              </li>
-  
-              <li data-aos="fade-up" data-aos-delay="500">
-                <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                  </p>
-                </div>
-              </li>
-  
-            </ul>
-          </div>
-  
-        </div>
-      </section><!-- End Frequently Asked Questions Section -->
   
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="contact">
         <div class="container" data-aos="fade-up">
   
-          <div class="section-title">
+          <div class="section-title text-primary">
             <h2>Contact</h2>
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
           </div>
@@ -600,23 +520,19 @@
               <div class="info">
                 <div class="address">
                   <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h4>Lokasi:</h4>
+                  <p>Fakultas Teknik, Universitas Malikussaleh
+                    Kampus Bukit Indah, Jalan Batam
+                    Blang Pulo Muara Satu, Lhokseumawe, Provinsi Aceh, Indonesia</p>
                 </div>
   
                 <div class="email">
                   <i class="bi bi-envelope"></i>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p>ft@unimal.ac.id</p>
                 </div>
   
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
-                </div>
-  
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                <iframe src="https://goo.gl/maps/bQtLg33apM4qH8qS7" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
               </div>
   
             </div>
@@ -661,17 +577,6 @@
     <footer id="footer">
   
       <div class="footer-newsletter">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <h4>Join Our Newsletter</h4>
-              <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-              <form action="" method="post">
-                <input type="email" name="email"><input type="submit" value="Subscribe">
-              </form>
-            </div>
-          </div>
-        </div>
       </div>
   
       <div class="footer-top">
