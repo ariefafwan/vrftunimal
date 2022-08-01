@@ -44,6 +44,7 @@
 
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
+  {{-- <link href="css/bootstrap.min.css" rel="stylesheet"> --}}
 
 </head>
 
@@ -262,73 +263,61 @@
       <div class="container">
 
         <div class="section-title text-primary">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Berita</h2>
         </div>
 
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-blue">
-              <div class="icon">
-                <i class="bx bxl-dribbble"></i>
+          <div class="row">
+            <!-- berita -->
+            @php
+              $i = 1;
+            @endphp
+            @foreach ($berita as $row)
+            {{-- <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="{{ asset('img/news/'.$row->image) }}" class="img-fluid rounded-start" alt="{{ $row->title }}">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title text-dark">{{ $row->title }}</h5>
+                    <p class="card-text text-dark">{{ Str::limit(strip_tags($row->details),50) }}</p>
+                    <p class="card-text text-dark"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
               </div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
+            </div> --}}
+                      <div class="col-md-4">
+                          <article itemprop="blogPost" itemscope="" itemtype="#" class="ct-article ct-iconBox--withImageGreyScale">
+                              <div class="ct-article-media ct-icon">
+                                  <a itemprop="url" href="https://teknik.unimal.ac.id/index/single/199/seminar-nasional-fakultas-teknik-unimal-menjadi-ajang-paling-bergengsi">
+                                      <img itemprop="image" src="{{ asset('img/news/'.$row->image) }}" alt="blog-post" style="width: 100%; height: 230px">
+                                  </a>
+                              </div>
+                              <div class="ct-article-title">
+                                  <a itemprop="url" href="https://teknik.unimal.ac.id/index/single/199/seminar-nasional-fakultas-teknik-unimal-menjadi-ajang-paling-bergengsi">
+                                      <h4 class="text-dark">{{ $row->title }}</h4>
+                                  </a>
+                              </div>
+                              <ul class="list-unstyled list-inline ct-article-meta">
+                                <li class="text-muted text-dark">{{ $row->created_at->format('l, H:i:s d M Y') }}</li>
+                              </ul>
+                              <div itemprop="text" class="ct-article-description">
+                                  <h6 class="ct-u-marginBottom50 text-dark">{{ Str::limit(strip_tags($row->details),50) }}</h6>
+                              </div>
+                          </article>
+                      </div>
+            @if ($i % 3 == 0)
+              <div class="clearfix visible-md visible-lg"></div>
+            @endif
+            @php
+              $i++;
+            @endphp
+            @endforeach
           </div>
+          <!-- /row -->
+                                
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-orange ">
-              <div class="icon">
-                <i class="bx bx-file"></i>
-              </div>
-              <h4><a href="">Sed Perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-pink">
-              <div class="icon">
-                <i class="bx bx-tachometer"></i>
-              </div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box iconbox-yellow">
-              <div class="icon">
-                <i class="bx bx-layer"></i>
-              </div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box iconbox-red">
-              <div class="icon">
-                <i class="bx bx-slideshow"></i>
-              </div>
-              <h4><a href="">Dele Cardo</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box iconbox-teal">
-              <div class="icon">
-                <i class="bx bx-arch"></i>
-              </div>
-              <h4><a href="">Divera Don</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-            </div>
-          </div>
-
-        </div>
+        {{-- @endforeach --}}
 
       </div>
     </section><!-- End Services Section -->
@@ -519,7 +508,7 @@
             <div class="col-lg-5 d-flex align-items-stretch">
               <div class="info">
                 <div class="address">
-                  <i class="bi bi-geo-alt"></i>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
                   <h4>Lokasi:</h4>
                   <p>Fakultas Teknik, Universitas Malikussaleh
                     Kampus Bukit Indah, Jalan Batam
@@ -527,7 +516,7 @@
                 </div>
   
                 <div class="email">
-                  <i class="bi bi-envelope"></i>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
                   <h4>Email:</h4>
                   <p>ft@unimal.ac.id</p>
                 </div>
@@ -541,26 +530,26 @@
               <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
+                    <label for="name" class="text-primary">Your Name</label>
                     <input type="text" name="name" class="form-control" id="name" required>
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="name">Your Email</label>
+                    <label for="name" class="text-primary">Your Email</label>
                     <input type="email" class="form-control" name="email" id="email" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name">Subject</label>
+                  <label for="name" class="text-primary">Subject</label>
                   <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
                 <div class="form-group">
-                  <label for="name">Message</label>
+                  <label for="name" class="text-primary">Message</label>
                   <textarea class="form-control" name="message" rows="10" required></textarea>
                 </div>
                 <div class="my-3">
-                  <div class="loading">Loading</div>
+                  <div class="loading text-primary">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message text-primary">Your message has been sent. Thank you!</div>
                 </div>
                 <div class="text-center"><button type="submit">Send Message</button></div>
               </form>
