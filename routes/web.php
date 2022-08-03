@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\KatberitaController;
 use App\Http\Controllers\Admin\NewsController;
@@ -22,6 +23,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AdminController::class, 'welcome']);
+Route::resource('/contact', ContactController::class);
+Route::resource('admin/dosen', DosenController::class);
+Route::resource('admin/prodi', ProdiController::class);
+Route::resource('admin/berita', NewsController::class);
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
@@ -32,6 +37,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/katberita', KatberitaController::class);
     Route::resource('admin/dosen', DosenController::class);
     Route::resource('admin/prodi', ProdiController::class);
+    Route::resource('contact', ContactController::class);
 
 });
 
