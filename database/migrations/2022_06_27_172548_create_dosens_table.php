@@ -18,6 +18,7 @@ class CreateDosensTable extends Migration
             $table->string('name');
             $table->bigInteger('prodi_id')->unsigned();
             $table->foreign('prodi_id')->references('id')->on('prodis')->onDelete('cascade')->onUpdate('cascade');
+            $table->string('profile');
             $table->timestamps();
         });
     }

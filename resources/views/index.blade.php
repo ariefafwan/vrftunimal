@@ -50,7 +50,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header-transparent">
+  <header id="header" class="fixed-top header">
     <div class="container d-flex align-items-center justify-content-between">
 
       <a href="https://teknik.unimal.ac.id/"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
@@ -63,10 +63,9 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
           <li class="dropdown"><a href="#"><span>Profil</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Sejarah</a></li>
+              <li><a href="{{ route('sejarah') }}">Sejarah</a></li>
               <li><a href="#">Visi Misi</a></li>
               <li><a href="#">Struktur Organisasi</a></li>
               <li><a href="#">Profil Pimpinan Fakultas</a></li>
