@@ -43,7 +43,110 @@
   <link href="css/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="css/sejarah.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    #hero {
+      width: 100%;
+      height: 80vh;
+      background-image: url("/sejarah.jpg");
+      background-size: cover;
+      position: relative;
+    }
+    
+    #hero:before {
+      content: "";
+      background: rgba(45, 53, 69, 0.7);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    
+    #hero .container {
+      text-align: center;
+      padding-top: 50px;
+    }
+    
+    @media (max-width: 992px) {
+      #hero .container {
+        padding-top: 0;
+      }
+    }
+    
+    #hero h1 {
+      margin: 0;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      color: #fff;
+    }
+    
+    #hero h2 {
+      color: #eee;
+      margin: 15px 0 0 0;
+      font-size: 22px;
+    }
+    
+    #hero .btn-get-started {
+      font-family: "Jost", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 10px 28px 11px 28px;
+      border-radius: 50px;
+      transition: 0.5s;
+      margin: 10px 0 0 0;
+      color: #fff;
+      background: #47b2e4;
+    }
+    #hero .btn-get-started:hover {
+      background: #209dd8;
+    }
+    #hero .btn-watch-video {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      transition: 0.5s;
+      margin: 10px 0 0 25px;
+      color: #fff;
+      line-height: 1;
+    }
+    #hero .btn-watch-video i {
+      line-height: 0;
+      color: #fff;
+      font-size: 32px;
+      transition: 0.3s;
+      margin-right: 8px;
+    }
+    #hero .btn-watch-video:hover i {
+      color: #47b2e4;
+    }
+    
+    @media (min-width: 1024px) {
+      #hero {
+        background-attachment: fixed;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      #hero {
+        height: 100vh;
+      }
+    
+      #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    
+      #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+  </style>
 
 </head>
 
@@ -63,7 +166,8 @@
       @include('appnav')
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
@@ -73,7 +177,8 @@
       <a href="" class="btn-get-started mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
       {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="btn-watch-started"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
     </div>
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
 
@@ -103,13 +208,15 @@
           </div>
   
         </div>
-      </section><!-- End Team Section -->
-    </main><!-- End #main -->
+      </section>
+      <!-- End Team Section -->
+    </main>
+    <!-- End #main -->
   
     @include('appfooter')
 
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa fa-angle-up"></i></a>
   <!-- Vendor JS Files -->
   <script src="js/purecounter_vanilla.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>

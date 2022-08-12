@@ -45,6 +45,108 @@
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
 
+  <style>
+  #hero {
+    width: 100%;
+    height: 80vh;
+    background-image: url("/hero-img.jpg");
+    background-size: cover;
+    position: relative;
+  }
+  
+  #hero:before {
+    content: "";
+    background: rgba(45, 53, 69, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #hero .container {
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  @media (max-width: 992px) {
+    #hero .container {
+      padding-top: 0;
+    }
+  }
+  
+  #hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+  }
+  
+  #hero h2 {
+    color: #eee;
+    margin: 15px 0 0 0;
+    font-size: 22px;
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #47b2e4;
+  }
+  #hero .btn-get-started:hover {
+    background: #209dd8;
+  }
+  #hero .btn-watch-video {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin: 10px 0 0 25px;
+    color: #fff;
+    line-height: 1;
+  }
+  #hero .btn-watch-video i {
+    line-height: 0;
+    color: #fff;
+    font-size: 32px;
+    transition: 0.3s;
+    margin-right: 8px;
+  }
+  #hero .btn-watch-video:hover i {
+    color: #47b2e4;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero {
+      height: 100vh;
+    }
+  
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+</style>
 </head>
 
 <body>
@@ -60,10 +162,124 @@
         <span class="deskripsi-web text-white">Universitas Malikussaleh</span>
       </div>
 
-      @include('appnav')
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="{{ route('welcome') }}">Beranda</a></li>
+          <li class="dropdown"><a href="#"><span>Profil</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="{{ route('sejarah') }}">Sejarah</a></li>
+              <li><a href="{{ route('visimisi') }}">Visi Misi</a></li>
+              <li><a href="#team">Struktur Organisasi</a></li>
+              <li><a href="#">Profil Pimpinan Fakultas</a></li>
+              <li><a href="#">Fasilitas Penunjang</a></li>
+              <li><a href="#">Prestasi</a></li>
+              <li><a href="#">Dosen</a></li>
+              <li><a href="#">Tenaga Kependidikan</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Jurusan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Sipil</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="https://sipil.unimal.ac.id/">Prodi Teknik Sipil</a></li>
+                  <li><a href="https://arsitektur.unimal.ac.id/">Prodi Teknik Arsitektur</a></li>
+                  <li><a href="#">Prodi Magister Teknik Sipil</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Mesin</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="http://tm.unimal.ac.id/">Prodi Teknik Mesin</a></li>
+                  <li><a href="https://mtet.unimal.ac.id/">Prodi Magister Teknik Energi Tebarukan</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Industri</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="http://industri.unimal.ac.id/">Prodi Teknik Industri</a></li>
+                  <li><a href="#">Prodi Teknik Logistik</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Kimia</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="https://teknik-kimia.unimal.ac.id/">Prodi Teknik Kimia</a></li>
+                  <li><a href="https://material.unimal.ac.id/">Prodi Teknik Material</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Elektro</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="https://elektro.unimal.ac.id/">Prodi Teknik Elektro</a></li>
+                  <li><a href="https://sisteminformasi.unimal.ac.id/">Prodi Sistem Informasi</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Jurusan Teknik Informatika</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="https://informatika.unimal.ac.id/">Prodi Teknik Informatika</a></li>
+                  <li><a href="#">Prodi Magister Teknologi Informasi</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Akademik</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="#">Informasi Akademik</a></li>
+              <li class="dropdown"><a href="#"><span>Penelitian & Pengabdian</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">LPPM</a></li>
+                  <li><a href="#">Penelitian</a></li>
+                  <li><a href="#">Pengabdian</a></li>
+                  <li><a href="#">HaKI</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Daftar Yudisium</a></li>
+              <li><a href="#">Kebijakan Akademik</a></li>
+              <li><a href="#">Panduan Akademik</a></li>
+              <li><a href="#">Akreditasi</a></li>
+              <li><a href="#">Informasi Umum</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Layanan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="#">SIA</a></li>
+              <li><a href="#">E-Learning</a></li>
+              <li><a href="#">E-Library</a></li>
+              <li><a href="#">SIMPEG</a></li>
+              <li><a href="#">PORTAL</a></li>
+              <li><a href="#">Survey UNIMAL</a></li>
+              <li><a href="#">Layanan Kemahasiswaan</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Kemahasiswaan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="#">Kampus Merdeka</a></li>
+              <li class="dropdown"><a href="#"><span>Organisasi Mahasiswa</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="#">BEM FT UNIMAL</a></li>
+                  <li><a href="#">DPM FT UNIMAL</a></li>
+                  <li><a href="#">HIMATESIP</a></li>
+                  <li><a href="#">HIMATESIN</a></li>
+                  <li><a href="#">HIMTI</a></li>
+                  <li><a href="#">HIMATEMIA</a></li>
+                  <li><a href="#">HIMATRO</a></li>
+                  <li><a href="#">HIMATEKA</a></li>
+                  <li><a href="#">HIMATIF</a></li>
+                  <li><a href="#">HIMASI</a></li>
+                  <li><a href="#">HIMATERIAL</a></li>
+                  <li><a href="#">Teknik Logistik</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Alumni</a></li>
+              <li><a href="#">Data Mahasiswa</a></li>
+              <li><a href="#">Prestasi Mahasiswa</a></li>
+              <li><a href="#">Kegiatan Mahasiswa</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="fa fa-bars mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
 
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center justify-content-center">
@@ -73,7 +289,8 @@
       <a href="" class="btn-get-started mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
       {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="btn-watch-started"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
     </div>
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
 
@@ -138,7 +355,8 @@
         </div>
 
       </div>
-    </section><!-- End Clients Section -->
+    </section>
+    <!-- End Clients Section -->
 
     <!-- ======= Berita ======= -->
     <section id="services" class="services">
@@ -181,20 +399,19 @@
               $i++;
             @endphp
             @endforeach
+            <!-- berita -->
           </div>
-          <!-- /row -->
-                                
-
-        {{-- @endforeach --}}
 
       </div>
-    </section><!-- End Berita -->
+    </section>
+    <!-- End Berita -->
 
     <!-- ======= Section ======= -->
     <section id="cta" class="cta">
-    </section><!-- End Section -->
+    </section>
+    <!-- End Section -->
 
-    <!-- ======= Testimonials Section ======= -->
+    <!-- ======= Section Kata Sambutan======= -->
     <section id="testimonials" class="testimonials">
       <div class="container">
 
@@ -202,170 +419,49 @@
           <h2>Rencananya Kata Sambutan Dekan</h2>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+        <div class="card mb-3" style="max-width: 100%;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="/dekan.jpeg" style="width: 100%; height: 100%" class="img-cover" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h1 class="card-title text-dark">Card title</h1>
+                <h5 class="card-text text-dark">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h5>
               </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-              </div>
-            </div><!-- End testimonial item -->
-
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
+    <!-- End Section Kata SambutanS -->
 
-    <!-- ======= Team Section ======= -->
+    <!-- ======= Struktur Section ======= -->
     <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
   
           <div class="section-title text-primary">
-            <h2>Rencananya Struktur Organisasi</h2>
-            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <h2>Struktur Organisasi</h2>
           </div>
   
           <div class="row">
-  
-            <div class="col-lg-6">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4 mt-lg-0">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-                <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 mt-4">
-              <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-                <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                  <div class="social">
-                    <a href=""><i class="ri-twitter-fill"></i></a>
-                    <a href=""><i class="ri-facebook-fill"></i></a>
-                    <a href=""><i class="ri-instagram-fill"></i></a>
-                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
+          <div class="container">
+            <img class="img-cover" style="width: 100%; height: 100%" src="struktur-organisasi.jpg">
+          </div>
+          
           </div>
   
         </div>
-      </section><!-- End Team Section -->
-    </main><!-- End #main -->
+      </section>
+      <!-- End Struktur Section -->
+    </main>
+    <!-- End #main -->
   
     @include('appfooter')
   
     <div id="preloader"></div>
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa fa-angle-up"></i></a>
   <!-- Vendor JS Files -->
   <script src="js/purecounter_vanilla.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
