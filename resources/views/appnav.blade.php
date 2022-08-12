@@ -5,7 +5,7 @@
         <ul>
           <li><a href="{{ route('sejarah') }}">Sejarah</a></li>
           <li><a href="{{ route('visimisi') }}">Visi Misi</a></li>
-          <li><a href="#team">Struktur Organisasi</a></li>
+          <li><a href="{{ route('welcome') }}">Struktur Organisasi</a></li>
           <li><a href="#">Profil Pimpinan Fakultas</a></li>
           <li><a href="#">Fasilitas Penunjang</a></li>
           <li><a href="#">Prestasi</a></li>
@@ -17,38 +17,38 @@
         <ul>
           <li class="dropdown"><a href="#"><span>Jurusan Teknik Sipil</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Prodi Teknik Sipil</a></li>
-              <li><a href="#">Prodi Teknik Arsitektur</a></li>
+              <li><a href="https://sipil.unimal.ac.id/">Prodi Teknik Sipil</a></li>
+              <li><a href="https://arsitektur.unimal.ac.id/">Prodi Teknik Arsitektur</a></li>
               <li><a href="#">Prodi Magister Teknik Sipil</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Jurusan Teknik Mesin</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Prodi Teknik Mesin</a></li>
-              <li><a href="#">Prodi Magister Teknik Energi Tebarukan</a></li>
+              <li><a href="http://tm.unimal.ac.id/">Prodi Teknik Mesin</a></li>
+              <li><a href="https://mtet.unimal.ac.id/">Prodi Magister Teknik Energi Tebarukan</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Jurusan Teknik Industri</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Prodi Teknik Industri</a></li>
+              <li><a href="http://industri.unimal.ac.id/">Prodi Teknik Industri</a></li>
               <li><a href="#">Prodi Teknik Logistik</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Jurusan Teknik Kimia</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Prodi Teknik Kimia</a></li>
-              <li><a href="#">Prodi Teknik Material</a></li>
+              <li><a href="https://teknik-kimia.unimal.ac.id/">Prodi Teknik Kimia</a></li>
+              <li><a href="https://material.unimal.ac.id/">Prodi Teknik Material</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Jurusan Teknik Elektro</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Prodi Teknik Elektro</a></li>
-              <li><a href="#">Prodi Sistem Informasi</a></li>
+              <li><a href="https://elektro.unimal.ac.id/">Prodi Teknik Elektro</a></li>
+              <li><a href="https://sisteminformasi.unimal.ac.id/">Prodi Sistem Informasi</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#"><span>Jurusan Teknik Informatika</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">Prodi Teknik Informatika</a></li>
+              <li><a href="https://informatika.unimal.ac.id/">Prodi Teknik Informatika</a></li>
               <li><a href="#">Prodi Magister Teknologi Informasi</a></li>
             </ul>
           </li>
