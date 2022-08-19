@@ -1,6 +1,6 @@
-<nav class="navbar navbar-dark bg-success p-2">
+<nav class="navbar navbar-dark bg-light p-2">
     <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
-        <a class="navbar-brand text-center" href="{{ route('admin') }}">
+        <a class="navbar-brand text-center text-dark" href="{{ route('admin') }}">
             <img src="{{ asset('unimalpng.png') }}" alt="Ft UNIMAL" class="brand-img"
                 style="max-width: 15%">
             FAKULTAS TEKNIK UNIMAL

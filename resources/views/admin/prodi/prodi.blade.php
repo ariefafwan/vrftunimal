@@ -16,20 +16,20 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body">
-                    <table id="category-table" class="table table-bordered table-hover">
+                    <table id="category-table" class="table table-dark table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Nomor</th>
-                                <th>Nama Prodi</th>
-                                <th>Aksi</th>
+                                <th class="text-center">#</th>
+                                <th class="text-center">Nama Prodi</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             @foreach($prodi as $index => $row)
-                            <tr>
+                            <tr align="center">
                                 <th scope="row">{{ $index + 1 }}</th>
-                                <td>{{ $row->name }}</td>
+                                <td align="left">{{ $row->name }}</td>
                                 <td>
                                     <div class="btn-group">
                                         {{-- <a href="" class="btn btn-primary btn-flat"><i class="fa fa-eye"></i></a> --}}
@@ -50,13 +50,13 @@
                             @endforeach
                         </tbody>
 
-                        <tfoot>
+                        {{-- <tfoot>
                             <tr>
                                 <th>Nomor</th>
                                 <th>Nama Prodi</th>
                                 <th>Aksi</th>
                             </tr>
-                        </tfoot>
+                        </tfoot> --}}
                     </table>
                 </div>
 
