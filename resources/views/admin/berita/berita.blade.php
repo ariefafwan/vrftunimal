@@ -21,42 +21,42 @@
                 </div> --}}
 
                 <div class="box-body">
-                    <table id="category-table" class="table table-bordered table-hover">
+                    <table id="category-table" class="table table-dark table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Gambar</th>
-                                <th>Judul</th>
-                                <th>Prodi</th>
-                                <th>Detail</th>
-                                <th>Kategori</th>
-                                <th>Status</th>
-                                <th>Unggulan</th>
-                                <th>View</th>
-                                <th>Aksi</th>
+                                <th class="text-center">#</th>
+                                <th class="text-center">Gambar</th>
+                                <th class="text-center">Judul</th>
+                                <th class="text-center">Prodi</th>
+                                <th class="text-center">Detail</th>
+                                <th class="text-center">Kategori</th>
+                                <th class="text-center">Status</th>
+                                <th class="text-center">Unggulan</th>
+                                <th class="text-center">View</th>
+                                <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            @foreach($newslist as $news)
+                            @foreach($newslist as $index => $news)
                             <tr>
-                                <td>{{ $news->id }}</td>
-                                <td>
-                                    <img src="{{ asset('img/news/'.$news->image) }}" alt="{{ $news->title }}" class="card-img rounded w-75">
+                                <th scope="row">{{ $index + 1 }}</th>
+                                <td align="center">
+                                    <img src="{{ asset('img/news/'.$news->image) }}" alt="{{ $news->title }}" class="card-img rounded w-25">
                                 </td>
-                                <td>{{ $news->title }}</td>
+                                <td>{{ Str::limit(strip_tags($news->title),20) }}</td>
                                 <td>{{ $news->prodi->name }}</td>
                                 <td>{{ Str::limit(strip_tags($news->details),30) }}</td>
                                 <td>{{ $news->katberita->name }}</td>
                                 <td>{{ $news->status ? 'Published' : 'Unpublished' }}</td>
                                 <td>{{ $news->featured ? 'Featured' : '' }}</td>
                                 <td>{{ $news->view_count }}</td>
-                                <td>
-                                    <div class="btn-group-row">
+                                <td align="center">
+                                    <div class="btn-group">
                                         {{-- <a href="" class="btn btn-primary btn-flat"><i class="fa fa-eye"></i></a> --}}
-                                        <a href="{{ route('berita.edit',$news->id) }}" class="btn btn-warning btn-flat"><i data-feather="eye"></i></a>
+                                        <a href="{{ route('berita.edit',$news->id) }}" class="btn btn-warning mr-2"><i data-feather="eye"></i></a>
                                         <hr>
-                                        <a href="javascript:void(0)" class="btn btn-danger btn-flat"
+                                        <a href="javascript:void(0)" class="btn btn-danger"
                                             onclick="event.preventDefault();
                                                 document.getElementById('news-delete-form-{{$news->id}}').submit();">
                                             <i data-feather="trash"></i>
@@ -71,7 +71,7 @@
                             @endforeach
                         </tbody>
 
-                        <tfoot>
+                        {{-- <tfoot>
                             <tr>
                                 <th>ID</th>
                                 <th>Gambar</th>
@@ -84,7 +84,7 @@
                                 <th>View</th>
                                 <th>Aksi</th>
                             </tr>
-                        </tfoot>
+                        </tfoot> --}}
                     </table>
                 </div>
 
