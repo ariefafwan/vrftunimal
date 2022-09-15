@@ -81,7 +81,9 @@ class NewsController extends Controller
         $dtUpload->title = $request->title;
         $dtUpload->slug = $data;
         $dtUpload->image = $namaFile;
-        $dtUpload->details = $request->details;
+        $dtUpload->details1 = $request->details1;
+        $dtUpload->details2 = $request->details2;
+        $dtUpload->details3 = $request->details3;
         $dtUpload->prodi_id = $request->prodi_id;
         $dtUpload->katberita_id = $request->katberita_id;
         $dtUpload->status = $status;
