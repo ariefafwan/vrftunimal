@@ -23,8 +23,16 @@
                             <input type="text" name="title" class="form-control" id="newstitle" required>
                         </div>
                         <div class="form-group">
-                            <label>News Details</label>
-                            <textarea class="textarea" name="details" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
+                            <label>Paragraph 1</label>
+                            <textarea class="textarea" name="details1" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Paragraph 2</label>
+                            <textarea class="textarea" name="details2" placeholder="Place some text here (nulable)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Paragraph 3</label>
+                            <textarea class="textarea" name="details3" placeholder="Place some text here (nulable)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" required></textarea>
                         </div>
                     </div>
                 </div>

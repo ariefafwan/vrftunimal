@@ -23,4 +23,11 @@ class AdminController extends Controller
         $berita = Berita::all();
         return view('index', compact('berita'));
     }
+
+    public function show()
+    {
+        $berita = Berita::all();
+        $page = "asal";
+        return view('admin.berita.show', compact('berita', 'page'));
+    }
 }

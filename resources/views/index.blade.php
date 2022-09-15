@@ -375,12 +375,12 @@
                       <div class="col-md-4">
                           <article itemprop="blogPost" itemscope="" itemtype="#" class="ct-article ct-iconBox--withImageGreyScale">
                               <div class="ct-article-media ct-icon">
-                                  <a itemprop="url" href="https://teknik.unimal.ac.id/index/single/199/seminar-nasional-fakultas-teknik-unimal-menjadi-ajang-paling-bergengsi">
+                                  <a itemprop="url" href="{{ route('show') }}">
                                       <img itemprop="image" src="{{ asset('img/news/'.$row->image) }}" alt="blog-post" style="width: 100%; height: 230px">
                                   </a>
                               </div>
                               <div class="ct-article-title">
-                                  <a itemprop="url" href="https://teknik.unimal.ac.id/index/single/199/seminar-nasional-fakultas-teknik-unimal-menjadi-ajang-paling-bergengsi">
+                                  <a itemprop="url" href="{{ route('show') }}">
                                       <h4 class="text-dark">{{ $row->title }}</h4>
                                   </a>
                               </div>
@@ -388,7 +388,7 @@
                                 <li class="text-muted text-dark">{{ $row->created_at->format('l, H:i:s d M Y') }}</li>
                               </ul>
                               <div itemprop="text" class="ct-article-description">
-                                  <h6 class="ct-u-marginBottom50 text-dark">{{ Str::limit(strip_tags($row->details),50) }}</h6>
+                                  <h6 class="ct-u-marginBottom50 text-dark">{{ Str::limit(strip_tags($row->details1),50) }}</h6>
                               </div>
                           </article>
                       </div>
