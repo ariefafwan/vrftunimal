@@ -375,12 +375,13 @@
                       <div class="col-md-4">
                           <article itemprop="blogPost" itemscope="" itemtype="#" class="ct-article ct-iconBox--withImageGreyScale">
                               <div class="ct-article-media ct-icon">
-                                  <a itemprop="url" href="{{ route('show') }}">
+                                  {{-- <a itemprop="url" href="{{ route('berita.show',$row->id) }}"> --}}
+                                    <a itemprop="url" href="{{ route('show', $row->id)}}">
                                       <img itemprop="image" src="{{ asset('img/news/'.$row->image) }}" alt="blog-post" style="width: 100%; height: 230px">
                                   </a>
                               </div>
                               <div class="ct-article-title">
-                                  <a itemprop="url" href="{{ route('show') }}">
+                                  {{-- <a itemprop="url" href="{{ route('berita.show', $row->id) }}"> --}}
                                       <h4 class="text-dark">{{ $row->title }}</h4>
                                   </a>
                               </div>

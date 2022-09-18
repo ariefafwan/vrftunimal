@@ -27,12 +27,11 @@ Route::get('/', [AdminController::class, 'welcome'])->name('welcome');
 Route::resource('/contact', ContactController::class);
 Route::resource('admin/dosen', DosenController::class);
 Route::resource('admin/prodi', ProdiController::class);
-Route::resource('admin/berita', NewsController::class);
 Route::get('/sejarah', [ProfilController::class, 'sejarah'])->name('sejarah');
 Route::get('/visimisi', [ProfilController::class, 'visimisi'])->name('visimisi');
 Route::get('/prestasi', [ProfilController::class, 'prestasi'])->name('prestasi');
 Route::get('/dosen', [ProfilController::class, 'dosen'])->name('dosen');
-Route::get('/asal', [AdminController::class, 'show'])->name('show');
+Route::get('/berita/{id}', [AdminController::class, 'show'])->name('show');
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
