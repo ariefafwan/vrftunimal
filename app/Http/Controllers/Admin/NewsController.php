@@ -44,22 +44,6 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'title'         => 'required|unique:news|max:255',
-        //     'details'       => 'required',
-        //     'katberita_id'  => 'required',
-        //     'image'         => 'required|image|mimes:jpg,png,jpeg'
-        // ]);
-
-        // Berita::create([
-        //     'title'         => $request->title,
-        //     'slug'          => str_rot13($request->title),
-        //     'details'       => $request->details,
-        //     'katberita_id'   => $request->katberita_id,
-        //     'image'         => $imageName,
-        //     'status'        => $status,
-        //     'featured'      => $featured
-        // ]);
 
         $nm = $request->image;
         $namaFile = $nm->getClientOriginalName();
@@ -104,7 +88,8 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $news = Berita::find($id);
+        return view('admin.berita.show', compact('news'));
     }
 
     /**
