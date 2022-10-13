@@ -36,19 +36,20 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/bootstrap-icons.css" rel="stylesheet">
-  <link href="css/boxicons.min.css" rel="stylesheet">
-  <link href="css/glightbox.min.css" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="{{ asset ('css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset ("css/bootstrap-icons.css") }}" rel="stylesheet">
+  <link href="{{ asset ('css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ asset ('css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset ('css/swiper-bundle.min.css') }}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="css/style.css" rel="stylesheet">
+  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <style type="style/css">
 
-  <style>
     #hero {
       width: 100%;
       height: 80vh;
+      background-image: url("/hero-img.jpg");
       background-size: cover;
       position: relative;
     }
@@ -146,7 +147,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -242,15 +242,15 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa fa-angle-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="js/purecounter_vanilla.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/glightbox.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/validate.js"></script>
+  <script src="{{ asset ('js/purecounter_vanilla.js') }}"></script>
+  <script src="{{ asset ('js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset ('js/glightbox.min.js') }}"></script>
+  <script src="{{ asset ('js/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ asset ("js/swiper-bundle.min.js") }}"></script>
+  <script src="{{ asset ('js/validate.js') }}"></script>
 
   <!-- Template Main JS File -->
-  <script src="js/main.js"></script>
+  <script src="{{ asset ('js/main.js') }}"></script>
 
 </body>
 

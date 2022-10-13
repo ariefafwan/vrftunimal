@@ -8,6 +8,7 @@ use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
+use Prophecy\Call\Call;
 
 class NewsController extends Controller
 {
@@ -89,7 +90,8 @@ class NewsController extends Controller
     public function show($id)
     {
         $news = Berita::find($id);
-        return view('admin.berita.show', compact('news'));
+        $judul = Berita::find($id)->Str::title();
+        return view('admin.berita.show', compact('news', 'slug'));
     }
 
     /**
