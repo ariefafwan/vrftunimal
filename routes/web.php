@@ -32,6 +32,7 @@ Route::get('/visimisi', [ProfilController::class, 'visimisi'])->name('visimisi')
 Route::get('/prestasi', [ProfilController::class, 'prestasi'])->name('prestasi');
 Route::get('/dosen', [ProfilController::class, 'dosen'])->name('dosen');
 Route::get('/berita/{id}', [AdminController::class, 'show'])->name('show');
+// Route::get('/show', [AdminController::class, 'show1'])->name('show1');
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
