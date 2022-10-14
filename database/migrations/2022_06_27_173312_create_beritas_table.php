@@ -17,7 +17,9 @@ class CreateBeritasTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->text('details');
+            $table->text('details1');
+            $table->text('details2')->nullable();
+            $table->text('details3')->nullable();
             $table->string('image');
             $table->bigInteger('prodi_id')->unsigned();
             $table->foreign('prodi_id')->references('id')->on('prodis')->onDelete('cascade')->onUpdate('cascade');
