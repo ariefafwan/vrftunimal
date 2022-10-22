@@ -8,6 +8,7 @@ use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
+use Prophecy\Call\Call;
 
 class NewsController extends Controller
 {
@@ -44,22 +45,6 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'title'         => 'required|unique:news|max:255',
-        //     'details'       => 'required',
-        //     'katberita_id'  => 'required',
-        //     'image'         => 'required|image|mimes:jpg,png,jpeg'
-        // ]);
-
-        // Berita::create([
-        //     'title'         => $request->title,
-        //     'slug'          => str_rot13($request->title),
-        //     'details'       => $request->details,
-        //     'katberita_id'   => $request->katberita_id,
-        //     'image'         => $imageName,
-        //     'status'        => $status,
-        //     'featured'      => $featured
-        // ]);
 
         $nm = $request->image;
         $namaFile = $nm->getClientOriginalName();
@@ -81,7 +66,9 @@ class NewsController extends Controller
         $dtUpload->title = $request->title;
         $dtUpload->slug = $data;
         $dtUpload->image = $namaFile;
-        $dtUpload->details = $request->details;
+        $dtUpload->details1 = $request->details1;
+        $dtUpload->details2 = $request->details2;
+        $dtUpload->details3 = $request->details3;
         $dtUpload->prodi_id = $request->prodi_id;
         $dtUpload->katberita_id = $request->katberita_id;
         $dtUpload->status = $status;
@@ -102,7 +89,9 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $news = Berita::find($id);
+        $judul = Berita::find($id)->Str::title();
+        return view('admin.berita.show', compact('news', 'slug'));
     }
 
     /**
