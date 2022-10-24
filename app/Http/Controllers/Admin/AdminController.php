@@ -21,20 +21,16 @@ class AdminController extends Controller
     public function welcome()
     {
         $berita = Berita::all();
-        return view('index', compact('berita'));
+        $page = 'Beranda';
+        return view('index', compact('berita', 'page'));
     }
 
     public function show($id)
     {
         $news = Berita::find($id);
+        $berita = Berita::all();
         $judul = Berita::find($id)->title;
-        return view('admin.berita.show', compact('news', 'judul'));
+        return view('admin.berita.show', compact('berita','news', 'judul'));
     }
 
-    public function show1()
-    {
-        $news = Berita::all()->where('id', '1');
-        // $judul = Berita::all()->title;
-        return view('admin.berita.show', compact('news'));
-    }
 }
