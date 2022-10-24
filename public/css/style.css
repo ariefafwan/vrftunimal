@@ -3,7 +3,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Crimson Pro', serif;
   color: #444444;
 }
 
@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Crimson Pro', serif;
 }
 
 /*--------------------------------------------------------------
@@ -608,7 +608,7 @@ section {
 }
 
 .cta .cta-btn {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Crimson Pro', serif;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -814,7 +814,7 @@ section {
   font-size: 48px;
   color: #37517e;
   font-weight: 400;
-  font-family: "Jost", sans-serif;
+  font-family: 'Crimson Pro', serif;
   margin-bottom: 25px;
 }
 .pricing h4 sup {
@@ -860,7 +860,7 @@ section {
   transition: none;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Jost", sans-serif;
+  font-family: 'Crimson Pro', serif;
   transition: 0.3s;
   border: 1px solid #47b2e4;
 }
@@ -919,7 +919,7 @@ section {
 .faq .faq-list a {
   display: block;
   position: relative;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Crimson Pro', serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
@@ -1246,7 +1246,7 @@ section {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
-  font-family: "Jost", sans-serif;
+  font-family: 'Crimson Pro', serif;
   color: #5e5e5e;
 }
 #footer .footer-top h4 {
@@ -1266,7 +1266,7 @@ section {
 }
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #47b2e4;
+  color: #080808;
   font-size: 18px;
   line-height: 1;
 }
@@ -1286,12 +1286,12 @@ section {
 }
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #47b2e4;
+  color: #0b0c0c;
 }
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #47b2e4;
+  background: #0a0a0a;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1303,7 +1303,7 @@ section {
   transition: 0.3s;
 }
 #footer .footer-top .social-links a:hover {
-  background: #209dd8;
+  background: #000405;
   color: #fff;
   text-decoration: none;
 }

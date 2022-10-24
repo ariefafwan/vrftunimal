@@ -153,10 +153,10 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header">
+  <header id="header" class="header header-dark bg-dark fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="https://teknik.unimal.ac.id/"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
+      <a href="{{ route('welcome') }}"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
       <div class="header-tengah col-md-3 col-sm-6 col-xs-10">
         <span> <b class="judul-web text-white">Fakultas Teknik</span>
         <br>

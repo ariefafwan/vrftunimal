@@ -153,10 +153,10 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header">
+  <header id="header" class="header header-dark bg-dark fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="https://teknik.unimal.ac.id/"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
+      <a href="{{ route('welcome') }}"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
       <div class="header-tengah col-md-3 col-sm-6 col-xs-10">
         <span> <b class="judul-web text-white">Fakultas Teknik</span>
         <br>
@@ -174,7 +174,7 @@
     <div class="container position-relative">
       <h1>Sejarah</h1>
       <h2>Fakultas Teknik Universitas Malikussaleh</h2>
-      <a href="" class="btn-get-started mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
+      <a href="" class="btn-get-started bg-dark mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
       {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="btn-watch-started"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
     </div>
   </section>
@@ -186,7 +186,7 @@
     <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
   
-          <div class="section-title text-primary">
+          <div class="section-title text-dark">
             <h2>Sejarah</h2>
             <h5 class="text-start text-dark">Pada tahun 1982 didirikan Sekolah Tinggi Teknik Malikussaleh yang berada dibawah koordinasi Yayasan Pendidikan Malikussaleh, dimana Jurusan yang pertama sekali didirikan adalah Jurusan Teknik Sipil & Teknik Mesin, dan kemudian pada tahun 1983 dibuka Jurusan Teknik & Manajemen Industri.</h5>
             <br>

@@ -20,6 +20,9 @@ class CreateBeritasTable extends Migration
             $table->text('details1');
             $table->text('details2')->nullable();
             $table->text('details3')->nullable();
+            $table->text('details4')->nullable();
+            $table->text('details5')->nullable();
+            $table->text('details6')->nullable();
             $table->string('image');
             $table->bigInteger('prodi_id')->unsigned();
             $table->foreign('prodi_id')->references('id')->on('prodis')->onDelete('cascade')->onUpdate('cascade');
