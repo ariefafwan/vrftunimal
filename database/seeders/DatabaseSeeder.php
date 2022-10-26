@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Katberita;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(ProdiSeeder::class);
         $this->call(KatberitaSeeder::class);
+        $this->call(DosenSeeder::class);
     }
 }

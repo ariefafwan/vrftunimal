@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AdminController::class, 'welcome'])->name('welcome');
+Route::get('/vr', [AdminController::class, 'vr'])->name('vr');
 Route::resource('/contact', ContactController::class);
 Route::resource('admin/dosen', DosenController::class);
 Route::resource('admin/prodi', ProdiController::class);
