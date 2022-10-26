@@ -16,10 +16,6 @@
         </div>
         <div class="col-xs-12">
             <div class="box">
-                {{-- <div class="box-header">
-                    <h3 class="box-title">Data Table</h3>
-                </div> --}}
-
                 <div class="box-body">
                     <table id="category-table" class="table table-dark table-striped table-bordered table-hover">
                         <thead>
@@ -36,7 +32,6 @@
                                 <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             @foreach($newslist as $index => $news)
                             <tr>
@@ -70,28 +65,10 @@
                             </tr>
                             @endforeach
                         </tbody>
-
-                        {{-- <tfoot>
-                            <tr>
-                                <th>ID</th>
-                                <th>Gambar</th>
-                                <th>Judul</th>
-                                <th>Prodi</th>
-                                <th>Detail</th>
-                                <th>Kategori</th>
-                                <th>Status</th>
-                                <th>Unggulan</th>
-                                <th>View</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </tfoot> --}}
                     </table>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
 

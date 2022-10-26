@@ -18,7 +18,9 @@ class CreateDosensTable extends Migration
             $table->string('name');
             $table->bigInteger('prodi_id')->unsigned();
             $table->foreign('prodi_id')->references('id')->on('prodis')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('profile');
+            $table->string('nip');
+            $table->string('nidn');
+            $table->string('profile_img')->default('profil_img.jpg');
             $table->timestamps();
         });
     }

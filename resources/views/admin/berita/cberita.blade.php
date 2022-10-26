@@ -55,8 +55,8 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>Categories</label>
-                            <select name="katberita_id" class="form-select" style="width: 100%;" required>
-                                <option selected>Pilih Kategori</option>
+                            <select name="katberita_id" aria-required="true" class="form-select" style="width: 100%;">
+                                <option selected aria-required="true">Pilih Kategori</option>
                                 @foreach($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
@@ -64,8 +64,8 @@
                         </div>
                         <div class="form-group">
                             <label>Prodi</label>
-                            <select name="prodi_id" class="form-select" style="width: 100%;" required>
-                                <option selected>Pilih Prodi</option>
+                            <select name="prodi_id" required class="form-select" style="width: 100%;">
+                                <option selected aria-required="true">Pilih Prodi</option>
                                 @foreach($prodi as $p)
                                     <option value="{{ $p->id }}">{{ $p->name }}</option>
                                 @endforeach
@@ -78,7 +78,7 @@
                             <p class="help-block">(Image must be in .png or .jpg format)</p>
                         </div>
                         <hr>
-                        <div class="checkbox">
+                        <div class="checkbox" aria-required="true">
                             <label>
                                 <input type="checkbox" name="status"> Published
                             </label>
