@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Fakultas Teknik - UNIMAL</title>
+  <title> {{ $page }} | Fakultas Teknik - UNIMAL</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,7 +33,7 @@
     <script src="https://kit.fontawesome.com/35770c1bfd.js" crossorigin="anonymous"></script>
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,700;1,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -152,10 +152,10 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top header">
+  <header id="header" class="header header-dark bg-dark fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <a href="https://teknik.unimal.ac.id/"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
+      <a href="{{ route('welcome') }}"><img class="logo col-md-10 col-xs-6" src="https://teknik.unimal.ac.id/vic_image/system/logo_unimal_2.png"></a>
       <div class="header-tengah col-md-3 col-sm-6 col-xs-10">
         <span> <b class="judul-web text-white">Fakultas Teknik</span>
         <br>
@@ -286,8 +286,7 @@
     <div class="container position-relative">
       <h1>Selamat Datang</h1>
       <h2>Fakultas Teknik Universitas Malikussaleh</h2>
-      <a href="" class="btn-get-started mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
-      {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="btn-watch-started"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
+      <a href="{{ route('vr') }}" class="btn-get-started bg-dark mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
     </div>
   </section>
   <!-- End Hero -->
@@ -297,7 +296,7 @@
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients section-bg">
       <div class="container">
-        <div class="section-title text-primary">
+        <div class="section-title text-dark">
           <h2>Kerja Sama</h2>
         </div>
 
@@ -362,7 +361,7 @@
     <section id="services" class="services">
       <div class="container">
 
-        <div class="section-title text-primary">
+        <div class="section-title text-dark">
           <h2>Berita</h2>
         </div>
 
@@ -381,7 +380,7 @@
                                   </a>
                               </div>
                               <div class="ct-article-title">
-                                  {{-- <a itemprop="url" href="{{ route('berita.show', $row->id) }}"> --}}
+                                  <a itemprop="url" href="{{ route('show', $row->id) }}">
                                       <h4 class="text-dark">{{ $row->title }}</h4>
                                   </a>
                               </div>
@@ -393,7 +392,7 @@
                               </div>
                           </article>
                       </div>
-            @if ($i % 3 == 0)
+            @if ($i % 6 == 0)
               <div class="clearfix visible-md visible-lg"></div>
             @endif
             @php
@@ -402,21 +401,15 @@
             @endforeach
             <!-- berita -->
           </div>
-
       </div>
     </section>
     <!-- End Berita -->
-
-    <!-- ======= Section ======= -->
-    <section id="cta" class="cta">
-    </section>
-    <!-- End Section -->
 
     <!-- ======= Section Kata Sambutan======= -->
     <section id="testimonials" class="testimonials">
       <div class="container">
 
-        <div class="section-title text-primary">
+        <div class="section-title text-dark">
           <h2>Rencananya Kata Sambutan Dekan</h2>
         </div>
 
@@ -442,7 +435,7 @@
     <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
   
-          <div class="section-title text-primary">
+          <div class="section-title text-dark">
             <h2>Struktur Organisasi</h2>
           </div>
   

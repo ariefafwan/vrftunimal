@@ -69,6 +69,9 @@ class NewsController extends Controller
         $dtUpload->details1 = $request->details1;
         $dtUpload->details2 = $request->details2;
         $dtUpload->details3 = $request->details3;
+        $dtUpload->details4 = $request->details4;
+        $dtUpload->details5 = $request->details5;
+        $dtUpload->details6 = $request->details6;
         $dtUpload->prodi_id = $request->prodi_id;
         $dtUpload->katberita_id = $request->katberita_id;
         $dtUpload->status = $status;
@@ -139,8 +142,13 @@ class NewsController extends Controller
         $dtUpload->title = $request->title;
         $dtUpload->slug = $data;
         $dtUpload->image = $namaFile;
+        $dtUpload->details1 = $request->details1;
+        $dtUpload->details2 = $request->details2;
+        $dtUpload->details3 = $request->details3;
+        $dtUpload->details4 = $request->details4;
+        $dtUpload->details5 = $request->details5;
+        $dtUpload->details6 = $request->details6;
         $dtUpload->prodi_id = $request->prodi_id;
-        $dtUpload->details = $request->details;
         $dtUpload->katberita_id = $request->katberita_id;
         $dtUpload->status = $status;
         $dtUpload->featured = $featured;
