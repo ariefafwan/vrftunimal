@@ -21,10 +21,11 @@
     <div class="row">
       <div class="kontribusi col-sm-2 col-sm-offset-1">
         <div class="card" style="width: 18rem;">
-          <img src="{{ asset ('img/profil' .$row->profile_img) }}" class="card-img-top" alt="profile">
+          <img src="{{ asset('img/profil/'.$row->profile_img) }}" alt="{{ $row->nem }}" class="card-img-center rounded w-25">
           <div class="card-body">
             <h5 class="card-title">{{ $row->name }}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p align='left' class="card-text">NIP/NIDN :</p>
+            <p align='left' class="card-text">{{ $row->nip }} / {{ $row->nidn }}</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
