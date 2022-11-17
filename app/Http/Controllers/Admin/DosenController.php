@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Dosen;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -27,7 +28,9 @@ class DosenController extends Controller
      */
     public function create()
     {
-        //
+        $prodi      = Prodi::all();
+        $page       = "Tambah Dosen";
+        return view('admin.dosen.create', compact('page', 'prodi'));
     }
 
     /**
@@ -38,7 +41,20 @@ class DosenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nm = $request->profile_img;
+        $namaFile = $nm->getClientOriginalName();
+
+        $dtUpload = new Dosen();
+        $dtUpload->name = $request->name;
+        $dtUpload->profile_img = $namaFile;
+        $dtUpload->nip = $request->nip;
+        $dtUpload->nidn = $request->nidn;
+        $dtUpload->prodi_id = $request->prodi_id;
+
+        $nm->move(public_path() . '/img/profil', $namaFile);
+        $dtUpload->save();
+
+        return redirect()->route('dosen.index')->with(['message' => 'News created successfully!']);
     }
 
     /**
