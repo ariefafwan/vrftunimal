@@ -16,7 +16,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body">
-                    <table id="category-table" class="table table-bordered table-hover">
+                    <table id="category-table" class="table table-bordered table-light">
                         <thead>
                             <tr>
                                 <th>Nomor</th>
@@ -33,12 +33,12 @@
                                 <td>
                                     <div class="btn-group">
                                         {{-- <a href="" class="btn btn-primary btn-flat"><i class="fa fa-eye"></i></a> --}}
-                                        <a href="{{ route('katberita.edit',$row->id) }}" class="btn btn-warning btn-flat mr-2"><i data-feather="eye"></i></a>
+                                        <a href="{{ route('katberita.edit',$row->id) }}" class="btn btn-warning btn-flat mr-2"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                         <hr>
                                         <a href="javascript:void(0)" class="btn btn-danger btn-flat"
                                             onclick="event.preventDefault();
                                                 document.getElementById('news-delete-form-{{$row->id}}').submit();">
-                                            <i data-feather="trash"></i>
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
                                         <form id="news-delete-form-{{$row->id}}" action="{{ route('katberita.destroy',$row->id) }}" method="POST" style="display: none;">
                                             @csrf 
@@ -49,14 +49,6 @@
                             </tr>
                             @endforeach
                         </tbody>
-
-                        <tfoot>
-                            <tr>
-                                <th>Nomor</th>
-                                <th>Nama Kategori</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
 

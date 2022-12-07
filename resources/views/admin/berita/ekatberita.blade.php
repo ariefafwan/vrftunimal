@@ -19,9 +19,9 @@
             <div class="col-md-6 mb-2">
                 <div class="box box-primary">
                     <div class="box-body">
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="katberita">Nama Kategori</label>
-                            <input type="text" name="name" class="form-control" id="katberita" required>
+                            <input type="text" name="name" class="form-control" id="katberita" value="{{ $katberita->name }}" required>
                             <input type="hidden" name="status" class="form-control" value="1" id="katberita" required>
                         </div>
                     </div>

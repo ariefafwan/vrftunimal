@@ -171,9 +171,21 @@
               <li><a href="{{ route('visimisi') }}">Visi Misi</a></li>
               <li><a href="#team">Struktur Organisasi</a></li>
               <li><a href="#">Profil Pimpinan Fakultas</a></li>
+              <li class="dropdown"><a href="#"><span>Dosen</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul>
+                  <li><a href="{{ route('tsipil') }}">Prodi Teknik Sipil</a></li>
+                  <li><a href="{{ route('tmesin') }}">Prodi Teknik Mesin</a></li>
+                  <li><a href="{{ route('tkimia') }}">Prodi Teknik Kimia</a></li>
+                  <li><a href="{{ route('tindustri') }}">Prodi Teknik Industri</a></li>
+                  <li><a href="{{ route('telektro') }}">Prodi Teknik Elektro</a></li>
+                  <li><a href="{{ route('tinformatika') }}">Prodi Teknik Informatika</a></li>
+                  <li><a href="{{ route('sinformasi') }}">Prodi Sistem Informasi</a></li>
+                  <li><a href="{{ route('tmaterial') }}">Prodi Teknik Material</a></li>
+                  <li><a href="{{ route('tlogistik') }}">Prodi Teknik Logistik</a></li>
+                </ul>
+              </li>
               <li><a href="#">Fasilitas Penunjang</a></li>
               <li><a href="#">Prestasi</a></li>
-              <li><a href="#">Dosen</a></li>
               <li><a href="#">Tenaga Kependidikan</a></li>
             </ul>
           </li>

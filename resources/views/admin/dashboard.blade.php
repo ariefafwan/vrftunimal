@@ -5,7 +5,7 @@
     <hr>
 
     <div class="row my-4">
-        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="col-xl-2 col-md-4 mb-4">
             {{-- <a href="{{ route('admin.create') }}">  --}}
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
@@ -16,14 +16,14 @@
                             <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            <i class="fa fa-user" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </a>
         </div>
-        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="col-xl-2 col-md-4 mb-4">
             <a href="{{ route('berita.index') }}">
                 <div class="card border-left shadow h-100 py-2">
                     <div class="card-body">
@@ -33,29 +33,30 @@
                                     Berita</div>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-plus-square fa-2x text-gray-300"></i>
+                                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
         </div>
-        {{-- <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                Total Transaksi
+        <div class="col-xl-2 col-md-4 mb-4">
+            <a href="{{ route('showdosen') }}">
+                <div class="card border-left shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Dosen</div>
                             </div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                @currency($transaksi)
+                            <div class="col-auto">
+                                <i class="fa fa-user" aria-hidden="true"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div> --}}
+            </a>
+        </div>
     </div>
 
 

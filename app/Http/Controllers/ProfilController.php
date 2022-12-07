@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use App\Models\Dosen;
+use App\Models\Hmj;
+use App\Models\Konten;
+use App\Models\Prestasi;
+use App\Models\Prodi;
 use App\Models\Sejarah;
 use App\Models\Visimisi;
 use Illuminate\Support\Facades\Auth;
@@ -14,27 +19,38 @@ class ProfilController extends Controller
     public function sejarah()
     {
         $page = 'Sejarah';
-        return view('sejarah', compact('page'));
+        $sejarah = Sejarah::all()->where('prodi_id', '3');
+        $berita = Berita::all();
+        return view('sejarah', compact('page', 'sejarah', 'berita'));
     }
 
-    public function list_penyewaan(Sejarah $sejarah, Request $request)
+    public function welcome()
     {
-        $page = "Update Sejarah";
-        $dtUpload = new Sejarah();
-        $dtUpload->title = $request->title;
-        $dtUpload->details = $request->details;
-        $dtUpload->prodi_id = $request->prodi_id;
-        $dtUpload->katberita_id = $request->katberita_id;
+        $berita = Berita::all();
+        $page = 'Beranda';
+        return view('index', compact('berita', 'page'));
+    }
 
-        $dtUpload->save();
-        
-        return view('layouts.admin.penyewaan.index', compact('page', 'state', 'data', 'bukti', 'check', 'st'));
+    public function vr()
+    {
+        $berita = Berita::all();
+        $dosen = Dosen::all();
+        $prodi = Prodi::all();
+        $visimisi = Visimisi::all();
+        $sejarah = Sejarah::all();
+        $prestasi = Prestasi::all();
+        $konten = Konten::all();
+        $hmj = Hmj::all();
+        $page = "Virtual Tour";
+        return view('vr', compact('berita','dosen', 'prodi', 'visimisi', 'page','sejarah', 'prestasi', 'konten','hmj'));
     }
 
     public function visimisi()
     {
         $page = 'Visi Misi';
-        return view('visimisi', compact('page'));   
+        $visimisi = Visimisi::all()->where('prodi_id', '3');
+        $berita = Berita::all();
+        return view('visimisi', compact('page', 'berita', 'visimisi'));   
     }        
     
 }
