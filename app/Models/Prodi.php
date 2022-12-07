@@ -28,4 +28,9 @@ class Prodi extends Model
     {
         return $this->hasMany(Visimisi::class);
     }
+
+    public function prestasi()
+    {
+        return $this->hasMany(Prestasi::class);
+    }
 }

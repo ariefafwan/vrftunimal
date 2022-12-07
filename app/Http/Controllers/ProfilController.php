@@ -51,6 +51,14 @@ class ProfilController extends Controller
         $visimisi = Visimisi::all()->where('prodi_id', '3');
         $berita = Berita::all();
         return view('visimisi', compact('page', 'berita', 'visimisi'));   
-    }        
+    }
+
+    public function prestasi()
+    {
+        $page = 'Prestasi Mahasiswa';
+        $prestasi = Prestasi::all();
+        $berita = Berita::all();
+        return view('prestasi', compact('page', 'berita', 'prestasi'));   
+    }
     
 }

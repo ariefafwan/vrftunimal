@@ -185,7 +185,7 @@
                 </ul>
               </li>
               <li><a href="#">Fasilitas Penunjang</a></li>
-              <li><a href="#">Prestasi</a></li>
+              <li><a href="{{ route('prestasi') }}">Prestasi Mahasiswa</a></li>
               <li><a href="#">Tenaga Kependidikan</a></li>
             </ul>
           </li>
