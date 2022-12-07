@@ -16,9 +16,16 @@ class DosenController extends Controller
      */
     public function index()
     {
-        $page   = "Seluruh Dosen";
-        $dosen  = Dosen::all();
-        return view('admin.dosen.dosen', compact('page', 'dosen'));
+        // $page   = "Seluruh Dosen";
+        // $dosen  = Dosen::all();        
+        // $prodi = Prodi::all();
+
+        // if(request('search')) {
+        //     $dosen->where('name', 'like', '%' .request('search') . '%')
+        //           ->orwhere('nip', 'like', '%' . request('search') . '%');
+        // }
+
+        // return view('admin.dosen.show', compact('page', 'dosen', 'prodi'));
     }
 
     /**
@@ -54,7 +61,7 @@ class DosenController extends Controller
         $nm->move(public_path() . '/img/profil', $namaFile);
         $dtUpload->save();
 
-        return redirect()->route('dosen.index')->with(['message' => 'News created successfully!']);
+        return redirect()->route('showdosen')->with(['message' => 'News created successfully!']);
     }
 
     /**
@@ -65,7 +72,10 @@ class DosenController extends Controller
      */
     public function show($id)
     {
-        //
+        $page   = "Seluruh Dosen";
+        $dosen   = Dosen::find($id);
+        $prodi = Prodi::all();
+        return view('admin.dosen.dosen', compact('page', 'dosen', 'prodi'));
     }
 
     /**
@@ -76,7 +86,10 @@ class DosenController extends Controller
      */
     public function edit($id)
     {
-        //
+        $page   = "Edit Dosen";
+        $dosen  = Dosen::findOrFail($id);
+        $prodi  = Prodi::all();
+        return view('admin.dosen.edosen', compact('page', 'dosen', 'prodi'));
     }
 
     /**
@@ -88,7 +101,20 @@ class DosenController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $nm = $request->profile_img;
+        $namaFile = $nm->getClientOriginalName();
+
+        $dtUpload = Dosen::find($id);
+        $dtUpload->name = $request->name;
+        $dtUpload->profile_img = $namaFile;
+        $dtUpload->nip = $request->nip;
+        $dtUpload->nidn = $request->nidn;
+        $dtUpload->prodi_id = $request->prodi_id;
+
+        $nm->move(public_path() . '/img/profil', $namaFile);
+        $dtUpload->save();
+
+        return redirect()->route('showdosen')->with(['message' => 'News created successfully!']);
     }
 
     /**
@@ -99,6 +125,10 @@ class DosenController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $dosen = Dosen::findOrFail($id);
+
+        $dosen->delete();
+
+        return back()->with(['message' => 'Dosen deleted successfully!']);
     }
 }

@@ -33,7 +33,7 @@
     <script src="https://kit.fontawesome.com/35770c1bfd.js" crossorigin="anonymous"></script>
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,700;1,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -174,8 +174,7 @@
     <div class="container position-relative">
       <h1>Sejarah</h1>
       <h2>Fakultas Teknik Universitas Malikussaleh</h2>
-      <a href="" class="btn-get-started bg-dark mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
-      {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="btn-watch-started"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
+      <a href="{{ route('vr') }}" class="btn-get-started bg-dark mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
     </div>
   </section>
   <!-- End Hero -->
@@ -187,24 +186,18 @@
         <div class="container" data-aos="fade-up">
   
           <div class="section-title text-dark">
-            <h2>Sejarah</h2>
-            <h5 class="text-start text-dark">Pada tahun 1982 didirikan Sekolah Tinggi Teknik Malikussaleh yang berada dibawah koordinasi Yayasan Pendidikan Malikussaleh, dimana Jurusan yang pertama sekali didirikan adalah Jurusan Teknik Sipil & Teknik Mesin, dan kemudian pada tahun 1983 dibuka Jurusan Teknik & Manajemen Industri.</h5>
+            @foreach ($sejarah as $sejarah)
+            <h2>Sejarah {{ $sejarah->prodi->name }} UNIMAL</h2>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $sejarah->details1 }}</p>
             <br>
-            <h5 class="text-start text-dark">Untuk meningkatkan status maka pada tanggal 19 Maret 1984 secara resmi Sekolah Tinggi Teknik Malikussaleh berstatus Terdaftar dengan Surat Keputusan Menteri Pendidikan dan Kebudayaan RI dengan nomor 0357/0/1984.  Pada tahun 1996  Sekolah Tinggi Teknik Malikussaleh Membuka satu jurusan baru yaitu Jurusan Teknik Kimia.</h5>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $sejarah->details2 }}</p>
             <br>
-            <h5 class="text-start text-dark">Upaya peningkatan ruang lingkup kerja tidak hanya sampai disitu, karena pada tanggal 11 September 1989 secara resmi Sekolah Tinggi Teknik Malikussaleh terdaftar sebagai FT UNIMAL dengan Surat Keputusan Menteri Pendidikan dan Kebudayaan RI No. 0584/0/1989 dengan jurusannya Teknik Sipil, Teknik Mesin, Teknik & Manajemen Industri dan Teknik Kimia.</h5>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $sejarah->details3 }}</p>
             <br>
-            <h5 class="text-start text-dark">Dengan melihat perkembangan dan tingkat kebutuhan  pendidikan Teknik dikawasan Industri Lhokseumawe di tahun 1989 Sekolah Tinggi Teknik Malikussaleh kembali membuka Jurusan Teknik Elektro.</h5>
-            <h5 class="text-start text-dark">Perkembangan ini telah membawa FT UNIMAL memiliki lima Jurusan  yaitu :</h5>
-            <h5 class="text-start text-dark">1. Jurusan Teknik Sipil. </h5>
-            <h5 class="text-start text-dark">2. Jurusan Teknik Mesin. </h5>
-            <h5 class="text-start text-dark">3. Jurusan Teknik Industri. </h5>
-            <h5 class="text-start text-dark">4. Jurusan Teknik Kimia. </h5>
-            <h5 class="text-start text-dark">5. Jurusan Teknik Elektro. </h5>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $sejarah->details4 }}</p>
             <br>
-            <h5 class="text-start text-dark"> Pengelolaan Fakultas Teknik sejak tahun 1987 sampai tahun 1996 dipercayakan oleh Yayasan Pendidikan Malikussaleh kepada PERSATUAN INSINYUR INDONESIA (PII) Cabang Lhokseumawe, selanjutnya setelah itu kembali lagi ke Yayasan.</h5>
-            <br>
-            <h5 class="text-start text-dark">Dengan penegerian UNIMAL pada tanggal 01 Agustus 2001 Oleh presiden Megawati Soekarno Putri berdasarkan Keppres N0. 95 Tahun 2001, FT UNIMAL terus berusaha untuk memenuhi kebutuhan perkembangan Teknologi maka di tahun ajaran 2003-2004 membuka lagi dua prodi baru yaitu Program Studi Informatika yang berada dibawah Jurusan Teknik elektro dan Program Studi Teknik Arsitektur dibawah Jurusan Teknik sipil. Kemudian pada tahun 2014 membuka prodi baru yaitu Program Studi Sistem Informasi.</h5>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $sejarah->details5 }}</p>
+            @endforeach
           </div>
   
         </div>
