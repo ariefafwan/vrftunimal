@@ -5,11 +5,13 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\KatberitaController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\PrestasiController;
 use App\Http\Controllers\Admin\ProdiController;
 use App\Http\Controllers\Admin\SejarahController;
 use App\Http\Controllers\Admin\VisiMisiController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Konten\ShowDosenController;
+use App\Http\Controllers\Konten\ShowPrestasiController;
 use App\Http\Controllers\Konten\ShowSejarahController;
 use App\Http\Controllers\Konten\ShowVisiController;
 use App\Http\Controllers\ProfilController;
@@ -70,6 +72,17 @@ Route::get('/visimisitarsitektur', [ShowVisiController::class, 'tarsitektur'])->
 Route::get('/visimisisinformasi', [ShowVisiController::class, 'sisteminformasi'])->name('visimisisinformasi');
 Route::get('/visimisitmaterial', [ShowVisiController::class, 'tmaterial'])->name('visimisitmaterial');
 Route::get('/visimisitlogistik', [ShowVisiController::class, 'tlogistik'])->name('visimisitlogistik');
+//konten prestasi prodi
+Route::get('/prestasitsipil', [ShowPrestasiController::class, 'tsipil'])->name('prestasitsipil');
+Route::get('/prestasitmesin', [ShowPrestasiController::class, 'tmesin'])->name('prestasitmesin');
+Route::get('/prestasitkimia', [ShowPrestasiController::class, 'tkimia'])->name('prestasitkimia');
+Route::get('/prestasitindustri', [ShowPrestasiController::class, 'tindustri'])->name('prestasitindustri');
+Route::get('/prestasitelektro', [ShowPrestasiController::class, 'telektro'])->name('prestasitelektro');
+Route::get('/prestasitinformatika', [ShowPrestasiController::class, 'tinformatika'])->name('prestasitinformatika');
+Route::get('/prestasitarsitektur', [ShowPrestasiController::class, 'tarsitektur'])->name('prestasitarsitektur');
+Route::get('/prestasisinformasi', [ShowPrestasiController::class, 'sisteminformasi'])->name('prestasisinformasi');
+Route::get('/prestasitmaterial', [ShowPrestasiController::class, 'tmaterial'])->name('prestasitmaterial');
+Route::get('/prestasitlogistik', [ShowPrestasiController::class, 'tlogistik'])->name('prestasitlogistik');
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
@@ -85,5 +98,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/sejarahfakultas', [AdminController::class, 'sejarahfakultas'])->name('sejarahfakultas');
     Route::resource('admin/visimisiprodi', VisiMisiController::class);
     Route::get('/admin/visimisifakultas', [AdminController::class, 'visimisifakultas'])->name('visimisifakultas');
+    Route::resource('admin/prestasiprodi', PrestasiController::class);
 });
 

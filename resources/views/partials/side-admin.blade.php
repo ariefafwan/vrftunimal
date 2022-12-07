@@ -50,5 +50,11 @@
                 <li><a class="dropdown-item" href="{{ route('sejarahprodi.index') }}">Sejarah Prodi</a></li>
             </div>
         </div>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('prestasiprodi.index') }}">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <span class="ml-2">Prestasi</span>
+            </a>
+        </li>
     </ul>
 </div>
