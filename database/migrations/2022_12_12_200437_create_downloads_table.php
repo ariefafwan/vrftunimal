@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHmjsTable extends Migration
+class CreateDownloadsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class CreateHmjsTable extends Migration
      */
     public function up()
     {
-        Schema::create('hmjs', function (Blueprint $table) {
+        Schema::create('downloads', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('file');
+            $table->bigInteger('prodi_id')->unsigned();
+            $table->foreign('prodi_id')->references('id')->on('prodis')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +30,6 @@ class CreateHmjsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hmjs');
+        Schema::dropIfExists('downloads');
     }
 }
