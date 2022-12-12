@@ -39,10 +39,8 @@ class ProfilController extends Controller
         $visimisi = Visimisi::all();
         $sejarah = Sejarah::all();
         $prestasi = Prestasi::all();
-        $konten = Konten::all();
-        $hmj = Hmj::all();
         $page = "Virtual Tour";
-        return view('vr', compact('berita','dosen', 'prodi', 'visimisi', 'page','sejarah', 'prestasi', 'konten','hmj'));
+        return view('vr', compact('berita','dosen', 'prodi', 'visimisi', 'page','sejarah', 'prestasi'));
     }
 
     public function visimisi()

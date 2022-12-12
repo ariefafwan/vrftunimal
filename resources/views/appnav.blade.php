@@ -116,10 +116,10 @@
           </li>
           <li><a href="#">Alumni</a></li>
           <li><a href="#">Data Mahasiswa</a></li>
-          <li><a href="#">Prestasi Mahasiswa</a></li>
           <li><a href="#">Kegiatan Mahasiswa</a></li>
         </ul>
       </li>
+      <li><a class="nav-link" href="#">Downloads</a></li>
     </ul>
     <i class="fa fa-bars mobile-nav-toggle"></i>
   </nav><!-- .navbar -->
