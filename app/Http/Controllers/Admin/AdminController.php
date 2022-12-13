@@ -28,26 +28,6 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('user', 'page'));
     }
 
-    public function welcome()
-    {
-        $berita = Berita::all();
-        $page = 'Beranda';
-        return view('index', compact('berita', 'page'));
-    }
-
-    public function vr()
-    {
-        $berita = Berita::all();
-        $dosen = Dosen::all();
-        $prodi = Prodi::all();
-        $visimisi = Visimisi::all();
-        $sejarah = Sejarah::all();
-        $prestasi = Prestasi::all();
-        $konten = Konten::all();
-        $hmj = Hmj::all();
-        $page = "Virtual Tour";
-        return view('vr', compact('berita','dosen', 'prodi', 'visimisi', 'page','sejarah', 'prestasi', 'konten','hmj'));
-    }
 
     public function show($id)
     {
@@ -55,6 +35,42 @@ class AdminController extends Controller
         $berita = Berita::all();
         $judul = Berita::find($id)->title;
         return view('admin.berita.show', compact('berita','news', 'judul'));
+    }
+
+    public function showdosen(Request $request)
+    {
+        // $page   = "Seluruh Dosen";
+        // // $dosen  = Dosen::get()->where('prodi_id', $per);
+        // $dosen = Dosen::all();
+        // $id_prodi = Prodi::all();
+        // $per = $request->prodi_id;
+
+        // return view('admin.dosen.dosen', compact('page', 'dosen', 'id_prodi'));
+
+        $page   = "Seluruh Dosen";
+        $dosen  = Dosen::all();        
+        $prodi = Prodi::all();
+
+        if(request('search')) {
+            $dosen->where('name', 'like', '%' .request('search') . '%');
+                //   ->orwhere('nip', 'like', '%' . request('search') . '%');
+        }
+
+        return view('admin.dosen.show', compact('page', 'dosen', 'prodi'));
+    }
+
+    public function sejarahfakultas()
+    {
+        $sejarah = Sejarah::all()->where('prodi_id', '3');
+        $page = "Sejarah FT UNIMAL";
+        return view('admin.sejarah.fakultas', compact('sejarah', 'page'));
+    }
+
+    public function visimisifakultas()
+    {
+        $visimisi = Visimisi::all()->where('prodi_id', '3');
+        $page = "VISI MISI FT UNIMAL";
+        return view('admin.visimisi.fakultas', compact('visimisi', 'page'));
     }
 
 }

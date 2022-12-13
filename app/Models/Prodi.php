@@ -18,4 +18,19 @@ class Prodi extends Model
     {
         return $this->hasMany(Dosen::class);
     }
+
+    public function sejarah()
+    {
+        return $this->hasMany(Sejarah::class);
+    }
+
+    public function visimisi()
+    {
+        return $this->hasMany(Visimisi::class);
+    }
+
+    public function prestasi()
+    {
+        return $this->hasMany(Prestasi::class);
+    }
 }

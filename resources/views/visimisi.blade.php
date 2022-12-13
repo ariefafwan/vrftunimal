@@ -33,7 +33,7 @@
     <script src="https://kit.fontawesome.com/35770c1bfd.js" crossorigin="anonymous"></script>
   
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,700;1,700" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -55,97 +55,97 @@
     }
     
     #hero:before {
-      content: "";
-      background: rgba(45, 53, 69, 0.7);
-      position: absolute;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-    
+    content: "";
+    background: rgba(45, 53, 69, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #hero .container {
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  @media (max-width: 992px) {
     #hero .container {
-      text-align: center;
-      padding-top: 50px;
+      padding-top: 0;
     }
-    
-    @media (max-width: 992px) {
-      #hero .container {
-        padding-top: 0;
-      }
+  }
+  
+  #hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+  }
+  
+  #hero h2 {
+    color: #eee;
+    margin: 15px 0 0 0;
+    font-size: 22px;
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px 11px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #47b2e4;
+  }
+  #hero .btn-get-started:hover {
+    background: #209dd8;
+  }
+  #hero .btn-watch-video {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin: 10px 0 0 25px;
+    color: #fff;
+    line-height: 1;
+  }
+  #hero .btn-watch-video i {
+    line-height: 0;
+    color: #fff;
+    font-size: 32px;
+    transition: 0.3s;
+    margin-right: 8px;
+  }
+  #hero .btn-watch-video:hover i {
+    color: #47b2e4;
+  }
+  
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
     }
-    
+  }
+  
+  @media (max-width: 768px) {
+    #hero {
+      height: 100vh;
+    }
+  
     #hero h1 {
-      margin: 0;
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 56px;
-      color: #fff;
+      font-size: 28px;
+      line-height: 36px;
     }
-    
+  
     #hero h2 {
-      color: #eee;
-      margin: 15px 0 0 0;
-      font-size: 22px;
+      font-size: 18px;
+      line-height: 24px;
     }
-    
-    #hero .btn-get-started {
-      font-family: "Jost", sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      letter-spacing: 1px;
-      display: inline-block;
-      padding: 10px 28px 11px 28px;
-      border-radius: 50px;
-      transition: 0.5s;
-      margin: 10px 0 0 0;
-      color: #fff;
-      background: #47b2e4;
-    }
-    #hero .btn-get-started:hover {
-      background: #209dd8;
-    }
-    #hero .btn-watch-video {
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      transition: 0.5s;
-      margin: 10px 0 0 25px;
-      color: #fff;
-      line-height: 1;
-    }
-    #hero .btn-watch-video i {
-      line-height: 0;
-      color: #fff;
-      font-size: 32px;
-      transition: 0.3s;
-      margin-right: 8px;
-    }
-    #hero .btn-watch-video:hover i {
-      color: #47b2e4;
-    }
-    
-    @media (min-width: 1024px) {
-      #hero {
-        background-attachment: fixed;
-      }
-    }
-    
-    @media (max-width: 768px) {
-      #hero {
-        height: 100vh;
-      }
-    
-      #hero h1 {
-        font-size: 28px;
-        line-height: 36px;
-      }
-    
-      #hero h2 {
-        font-size: 18px;
-        line-height: 24px;
-      }
-    }
+  }
   </style>
 
 </head>
@@ -174,8 +174,7 @@
     <div class="container position-relative">
       <h1>Visi Misi</h1>
       <h2>Fakultas Teknik Universitas Malikussaleh</h2>
-      <a href="" class="btn-get-started mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
-      {{-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="btn-watch-started"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> --}}
+      <a href="{{ route('vr') }}" class="btn-get-started bg-dark mt-4"><i class="fa fa-circle-play" aria-hidden="true"></i>  Mulai VR Tour</a>
     </div>
   </section>
   <!-- End Hero -->
@@ -184,19 +183,59 @@
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title text-primary">
-            <h2>Rencananya Visi Misi</h2>
-            {{-- <h5 class="text-start text-dark">Pada tahun 1982 didirikan Sekolah Tinggi Teknik Malikussaleh yang berada dibawah koordinasi Yayasan Pendidikan Malikussaleh, dimana Jurusan yang pertama sekali didirikan adalah Jurusan Teknik Sipil & Teknik Mesin, dan kemudian pada tahun 1983 dibuka Jurusan Teknik & Manajemen Industri.</h5> --}}
+      <div class="container" data-aos="fade-up">
+        <div class="section-title text-dark">
+          @foreach ($visimisi as $visimisi)
+          <h2>Visi, Misi, Tujuan, & Sasaran {{ $visimisi->prodi->name }} UNIMAL</h2>
+        <div class="row">
+          <div class="col-md-12 text-center mb-3">
+            <h3 class="labels mb-2">VISI</h3>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->visi }}</p>
           </div>
-  
+          <div class="col-md-12 text-center mb-3">
+            <h3 class="labels mb-2">MISI</h3>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->misi1 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->misi2 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->misi3 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->misi4 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->misi5 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->misi6 }}</p>
+          </div>
+          <div class="col-md-12 text-center mb-3">
+            <h3 class="labels mb-2">TUJUAN</h3>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->tujuan1 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->tujuan2 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->tujuan3 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->tujuan4 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->tujuan5 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->tujuan6 }}</p>
+          </div>
+          <div class="col-md-12 text-center mb-3">
+            <h3 class="labels mb-2">SASARAN</h3>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran1 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran2 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran3 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran4 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran5 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran6 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran7 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran8 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran9 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran10 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran11 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran12 }}</p>
+            <p align="justify" style="font-size: 18px;" class="text text-dark">{{ $visimisi->sasaran13 }}</p>
+          </div>
+          @endforeach
         </div>
-      </section><!-- End Team Section -->
-    </main>
+        </div>
+
+      </div>
+    </section>
+  </main>
     <!-- End #main -->
   
-    @include('appfooter')
+  @include('appfooter')
   
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa fa-angle-up"></i></a>
@@ -210,6 +249,8 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 

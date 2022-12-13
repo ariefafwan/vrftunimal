@@ -28,23 +28,23 @@
                         </div>
                         <div class="form-group">
                             <label>Paragraph 2</label>
-                            <textarea class="textarea" name="details2" placeholder="Place some text here (nulable)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                            <textarea class="textarea" name="details2" placeholder="Place some text here (optional)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Paragraph 3</label>
-                            <textarea class="textarea" name="details3" placeholder="Place some text here (nulable)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                            <textarea class="textarea" name="details3" placeholder="Place some text here (optional)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Paragraph 4</label>
-                            <textarea class="textarea" name="details4" placeholder="Place some text here (nulable)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                            <textarea class="textarea" name="details4" placeholder="Place some text here (optional)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Paragraph 5</label>
-                            <textarea class="textarea" name="details5" placeholder="Place some text here (nulable)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                            <textarea class="textarea" name="details5" placeholder="Place some text here (optional)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Paragraph 6</label>
-                            <textarea class="textarea" name="details6" placeholder="Place some text here (nulable)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                            <textarea class="textarea" name="details6" placeholder="Place some text here (optional)" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                     <div class="box-body">
                         <div class="form-group">
                             <label>Categories</label>
-                            <select name="katberita_id" aria-required="true" class="form-select" style="width: 100%;">
+                            <select name="katberita_id" aria-required="true" required class="form-select" style="width: 100%;">
                                 <option selected aria-required="true">Pilih Kategori</option>
                                 @foreach($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->name }}</option>

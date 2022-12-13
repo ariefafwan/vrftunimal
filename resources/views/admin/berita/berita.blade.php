@@ -17,7 +17,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body">
-                    <table id="category-table" class="table table-dark table-striped table-bordered table-hover">
+                    <table id="category-table" class="table table-light table-striped table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th class="text-center">#</th>
@@ -41,7 +41,7 @@
                                 </td>
                                 <td>{{ Str::limit(strip_tags($news->title),20) }}</td>
                                 <td>{{ $news->prodi->name }}</td>
-                                <td>{{ Str::limit(strip_tags($news->details),30) }}</td>
+                                <td>{{ Str::limit(strip_tags($news->details1),30) }}</td>
                                 <td>{{ $news->katberita->name }}</td>
                                 <td>{{ $news->status ? 'Published' : 'Unpublished' }}</td>
                                 <td>{{ $news->featured ? 'Featured' : '' }}</td>
@@ -49,12 +49,12 @@
                                 <td align="center">
                                     <div class="btn-group">
                                         {{-- <a href="" class="btn btn-primary btn-flat"><i class="fa fa-eye"></i></a> --}}
-                                        <a href="{{ route('berita.edit',$news->id) }}" class="btn btn-warning mr-2"><i data-feather="eye"></i></a>
+                                        <a href="{{ route('berita.edit',$news->id) }}" class="btn btn-warning mr-2"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                                         <hr>
                                         <a href="javascript:void(0)" class="btn btn-danger"
                                             onclick="event.preventDefault();
                                                 document.getElementById('news-delete-form-{{$news->id}}').submit();">
-                                            <i data-feather="trash"></i>
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
                                         <form id="news-delete-form-{{$news->id}}" action="{{ route('berita.destroy',$news->id) }}" method="POST" style="display: none;">
                                             @csrf 

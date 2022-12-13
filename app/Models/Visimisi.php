@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Visimisi extends Model
 {
     use HasFactory;
+
+    public function prodi()
+    {
+        return $this->belongsTo(Prodi::class);
+    }
 }
