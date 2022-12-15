@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use App\Models\Dosen;
+use App\Models\Download;
 use App\Models\Hmj;
 use App\Models\Konten;
 use App\Models\Prestasi;
@@ -57,6 +58,14 @@ class ProfilController extends Controller
         $prestasi = Prestasi::all();
         $berita = Berita::all();
         return view('prestasi', compact('page', 'berita', 'prestasi'));   
+    }
+
+    public function download()
+    {
+        $page = 'File Download';
+        $download = Download::all();
+        $berita = Berita::all();
+        return view('download', compact('page', 'berita', 'download'));   
     }
     
 }

@@ -27,9 +27,9 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        $page   = "Tambah Prodi";
-        $prodi  = Prodi::all();
-        return view('admin.prodi.cprodi', compact('page', 'prodi'));
+        // $page   = "Tambah Prodi";
+        // $prodi  = Prodi::all();
+        // return view('admin.prodi.cprodi', compact('page', 'prodi'));
     }
 
     /**
@@ -41,12 +41,12 @@ class ProdiController extends Controller
     public function store(Request $request)
     {
 
-        $dtUpload = new Prodi();
-        $dtUpload->name = $request->name;
+        // $dtUpload = new Prodi();
+        // $dtUpload->name = $request->name;
 
-        $dtUpload->save();
+        // $dtUpload->save();
 
-        return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
+        // return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
     }
 
     /**

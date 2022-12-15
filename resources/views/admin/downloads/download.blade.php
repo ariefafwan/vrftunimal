@@ -10,9 +10,6 @@
 
 <section class="content">
     <div class="row">
-        {{-- <div class="box-footer mb-3">
-            <a href="{{ route('prodi.create') }}" class="btn btn-primary"><i data-feather="plus"></i> CREATE NEW</a>
-        </div> --}}
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-body">
@@ -20,27 +17,31 @@
                         <thead>
                             <tr>
                                 <th class="text-center">#</th>
-                                <th class="text-center">Nama Prodi</th>
+                                <th class="text-center">Name</th>
+                                <th class="text-center">File</th>
+                                <th class="text-center">Prodi</th>
                                 <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
-
                         <tbody>
-                            @foreach($prodi as $index => $row)
-                            <tr align="center">
+                            @foreach($download as $index => $d)
+                            <tr>
                                 <th scope="row">{{ $index + 1 }}</th>
-                                <td align="left">{{ $row->name }}</td>
-                                <td>
+                                <td>{{ $d->name }}</td>
+                                <td>{{ $d->file }}</td>
+                                <td>{{ $d->prodi->name }}</td>
+                                <td align="center">
                                     <div class="btn-group">
-                                        {{-- <a href="" class="btn btn-primary btn-flat"><i class="fa fa-eye"></i></a> --}}
-                                        <a href="{{ route('prodi.edit',$row->id) }}" class="btn btn-warning btn-flat mr-2"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <a href="/file/download/{{ $d->file }}" class="btn btn-primary"><i class="fas fa-arrow-down"></i></a>
                                         <hr>
-                                        <a href="javascript:void(0)" class="btn btn-danger btn-flat"
+                                        <a href="{{ route('download.edit',$d->id) }}" class="btn btn-warning mr-2"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                        <hr>
+                                        <a href="javascript:void(0)" class="btn btn-danger"
                                             onclick="event.preventDefault();
-                                                document.getElementById('news-delete-form-{{$row->id}}').submit();">
+                                                document.getElementById('news-delete-form-{{$d->id}}').submit();">
                                             <i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
-                                        <form id="news-delete-form-{{$row->id}}" action="{{ route('prodi.destroy',$row->id) }}" method="POST" style="display: none;">
+                                        <form id="news-delete-form-{{$d->id}}" action="{{ route('download.destroy',$d->id) }}" method="POST" style="display: none;">
                                             @csrf 
                                             @method('DELETE')
                                         </form>
@@ -49,21 +50,10 @@
                             </tr>
                             @endforeach
                         </tbody>
-
-                        {{-- <tfoot>
-                            <tr>
-                                <th>Nomor</th>
-                                <th>Nama Prodi</th>
-                                <th>Aksi</th>
-                            </tr>
-                        </tfoot> --}}
                     </table>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
 

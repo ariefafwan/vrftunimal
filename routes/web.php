@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DosenController;
+use App\Http\Controllers\Admin\DownloadController;
 use App\Http\Controllers\Admin\KatberitaController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PrestasiController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\Admin\SejarahController;
 use App\Http\Controllers\Admin\VisiMisiController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Konten\ShowDosenController;
+use App\Http\Controllers\Konten\ShowDownloadController;
 use App\Http\Controllers\Konten\ShowPrestasiController;
 use App\Http\Controllers\Konten\ShowSejarahController;
 use App\Http\Controllers\Konten\ShowVisiController;
@@ -38,6 +40,7 @@ Route::resource('admin/prodi', ProdiController::class);
 Route::get('/sejarah', [ProfilController::class, 'sejarah'])->name('sejarah');
 Route::get('/visimisi', [ProfilController::class, 'visimisi'])->name('visimisi');
 Route::get('/prestasi', [ProfilController::class, 'prestasi'])->name('prestasi');
+Route::get('/download', [ProfilController::class, 'download'])->name('download');
 Route::get('/berita/{id}', [AdminController::class, 'show'])->name('show');
 //konten dosen prodi
 Route::get('/dosentsipil', [ShowDosenController::class, 'tsipil'])->name('tsipil');
@@ -83,6 +86,18 @@ Route::get('/prestasitarsitektur', [ShowPrestasiController::class, 'tarsitektur'
 Route::get('/prestasisinformasi', [ShowPrestasiController::class, 'sisteminformasi'])->name('prestasisinformasi');
 Route::get('/prestasitmaterial', [ShowPrestasiController::class, 'tmaterial'])->name('prestasitmaterial');
 Route::get('/prestasitlogistik', [ShowPrestasiController::class, 'tlogistik'])->name('prestasitlogistik');
+//konten downloads prodi
+Route::get('/downloadtsipil', [ShowDownloadController::class, 'tsipil'])->name('downloadtsipil');
+Route::get('/downloadtmesin', [ShowDownloadController::class, 'tmesin'])->name('downloadtmesin');
+Route::get('/downloadtkimia', [ShowDownloadController::class, 'tkimia'])->name('downloadtkimia');
+Route::get('/downloadtindustri', [ShowDownloadController::class, 'tindustri'])->name('downloadtindustri');
+Route::get('/downloadtelektro', [ShowDownloadController::class, 'telektro'])->name('downloadtelektro');
+Route::get('/downloadtinformatika', [ShowDownloadController::class, 'tinformatika'])->name('downloadtinformatika');
+Route::get('/downloadtarsitektur', [ShowDownloadController::class, 'tarsitektur'])->name('downloadtarsitektur');
+Route::get('/downloadsinformasi', [ShowDownloadController::class, 'sisteminformasi'])->name('downloadsinformasi');
+Route::get('/downloadtmaterial', [ShowDownloadController::class, 'tmaterial'])->name('downloadtmaterial');
+Route::get('/downloadtlogistik', [ShowDownloadController::class, 'tlogistik'])->name('downloadtlogistik');
+
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
@@ -99,5 +114,6 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('admin/visimisiprodi', VisiMisiController::class);
     Route::get('/admin/visimisifakultas', [AdminController::class, 'visimisifakultas'])->name('visimisifakultas');
     Route::resource('admin/prestasiprodi', PrestasiController::class);
+    Route::resource('admin/download', DownloadController::class);
 });
 
