@@ -191,7 +191,7 @@
 
                   </div>
                     
-                  <center><img class="img-cover"src="{{ asset('img/news/'.$news->image) }}"></center>                        
+                  <center><img class="img-cover" style="width: 50%" src="{{ asset('img/news/'.$news->image) }}"></center>                        
                    
                     <h5 align="justify" class="text-dark"><br>
                     {{ $news->details1 }}

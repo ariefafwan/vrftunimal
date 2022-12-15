@@ -33,4 +33,9 @@ class Prodi extends Model
     {
         return $this->hasMany(Prestasi::class);
     }
+
+    public function download()
+    {
+        return $this->hasMany(Download::class);
+    }
 }

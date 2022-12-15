@@ -29,7 +29,7 @@ class VisimisiSeeder extends Seeder
             'sasaran3' => 'Meningkatnya kuantitas dan kualitas pengabdian kepada masyarakat baik secara individual maupun secara kelembagaan program studi melalui layanan konsultasi, pendampingan dan pelatihan kepada masyarakat.',
             'sasaran4' => 'Meningkatnya kualitas pelayanan kepada Civitas akademika melalui tatakelola yang baik (good departement governance) termasuk kepada masyarakat dalam memberikan keterbukaan informasi publik',
             'sasaran5' => 'Meningkatnya kuantitas kerjasama substantif dan memperluas jaringan (net working) dalam fasilitasi lususan menuju dunia kerja',
-            'prodi_id' => '4'
+            'prodi_id' => '2'
         ]);
 
         Visimisi::create([
@@ -55,7 +55,7 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '5'
+            'prodi_id' => '3'
         ]);
 
         Visimisi::create([
@@ -81,7 +81,7 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '6'
+            'prodi_id' => '4'
         ]);
 
         Visimisi::create([
@@ -110,59 +110,59 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
+            'prodi_id' => '5'
+        ]);
+
+        Visimisi::create([
+            'visi' => 'Menjadi Program Studi Teknik Elektro Unggul Pada Bidang Ilmu Teknik Elektro di Tingkat Internasional Berbasis Potensi Lokal',
+            'misi1' => 'Menjadi Program Studi Teknik Elektro pada bidang ilmu Teknik Elektro di Tingkat Internasional berbasis potensi lokal.',
+            'misi2' => 'Menyelenggarakan penelitian berbasis potensi lokal melalui penerapan ilmu Teknik elektro yang diakui secara nasional dan internasional.',
+            'misi3' => 'Melaksanakan pengabdian kepada masyarakat untuk meningkatkan pengetahuan dan keterampilan masyarakat sebagai upaya proses pemantapan dan pemanfaatan potensi lokal.',
+            'misi4' => 'Meningkatkan efisiensi, akuntabilitas, kapabilitas, transparansi, dan berkeadilan untuk mewujudkan tata kelola penyelenggaraan pendidikan yang baik',
+            'tujuan1' => 'Menghasilkan lulusan yang memiliki kompetensi dan/atau profesional, beretika dan berkarakter dalam bidang ilmu Teknik Elektro',
+            'tujuan2' => 'Menghasilkan karya ilmiah dan karya kreatif yang unggul dan bereputasi nasional dan internasional',
+            'tujuan3' => 'Menerapkan hasil-hasil penelitian untuk meningkatkan taraf hidup masyarakat',
+            'tujuan4' => 'Mewujudkan efektivitas tata kelola penyelenggaraan pendidikan sehingga lebih efisien, akuntabel, kapabel, transparan, dan berkeadilan',
+            'sasaran1' => 'Meningkatnya kualitas dan kuantitas dosen dalam pendidikan dan pembelajaran',
+            'sasaran2' => 'Meningkatnya mutu akademik, daya saing, dan kompetensi',
+            'sasaran3' => 'Meningkatnya kualitas pembelajaran dan lulusan yang berdaya saing',
+            'sasaran4' => 'Meningkatnya keterlibatan mahasiswa dalam kegiatan ilmiah dan kewirausahaan',
+            'sasaran5' => 'Meningkatnya jumlah penelitian dan karya ilmiah dosen',
+            'sasaran6' => 'Meningkatnya jumlah penelitian unggulan berbasis potensi lokal',
+            'sasaran7' => 'Meningkatnya jumlah publikasi pada jurnal/prosiding bereputasi nasional dan internasional serta paten',
+            'sasaran8' => 'Meningkatnya alokasi dana untuk melakukan penelitian dan publikasi',
+            'sasaran9' => 'Meningkatnya kuantitas dan kualitas pengabdian kepada masyarakat yang dapat mengoptimalkan potensi lokal untuk meningkatkan kesejahteraan masyarakat',
+            'sasaran10' => 'Meningkatnya alokasi dana untuk melakukan pengabdian',
+            'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
+            'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
+            'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
+            'prodi_id' => '6'
+        ]);
+
+        Visimisi::create([
+            'visi' => 'Menjadi Program Studi Teknik Elektro Unggul Pada Bidang Ilmu Teknik Elektro di Tingkat Internasional Berbasis Potensi Lokal',
+            'misi1' => 'Menjadi Program Studi Teknik Elektro pada bidang ilmu Teknik Elektro di Tingkat Internasional berbasis potensi lokal.',
+            'misi2' => 'Menyelenggarakan penelitian berbasis potensi lokal melalui penerapan ilmu Teknik elektro yang diakui secara nasional dan internasional.',
+            'misi3' => 'Melaksanakan pengabdian kepada masyarakat untuk meningkatkan pengetahuan dan keterampilan masyarakat sebagai upaya proses pemantapan dan pemanfaatan potensi lokal.',
+            'misi4' => 'Meningkatkan efisiensi, akuntabilitas, kapabilitas, transparansi, dan berkeadilan untuk mewujudkan tata kelola penyelenggaraan pendidikan yang baik',
+            'tujuan1' => 'Menghasilkan lulusan yang memiliki kompetensi dan/atau profesional, beretika dan berkarakter dalam bidang ilmu Teknik Elektro',
+            'tujuan2' => 'Menghasilkan karya ilmiah dan karya kreatif yang unggul dan bereputasi nasional dan internasional',
+            'tujuan3' => 'Menerapkan hasil-hasil penelitian untuk meningkatkan taraf hidup masyarakat',
+            'tujuan4' => 'Mewujudkan efektivitas tata kelola penyelenggaraan pendidikan sehingga lebih efisien, akuntabel, kapabel, transparan, dan berkeadilan',
+            'sasaran1' => 'Meningkatnya kualitas dan kuantitas dosen dalam pendidikan dan pembelajaran',
+            'sasaran2' => 'Meningkatnya mutu akademik, daya saing, dan kompetensi',
+            'sasaran3' => 'Meningkatnya kualitas pembelajaran dan lulusan yang berdaya saing',
+            'sasaran4' => 'Meningkatnya keterlibatan mahasiswa dalam kegiatan ilmiah dan kewirausahaan',
+            'sasaran5' => 'Meningkatnya jumlah penelitian dan karya ilmiah dosen',
+            'sasaran6' => 'Meningkatnya jumlah penelitian unggulan berbasis potensi lokal',
+            'sasaran7' => 'Meningkatnya jumlah publikasi pada jurnal/prosiding bereputasi nasional dan internasional serta paten',
+            'sasaran8' => 'Meningkatnya alokasi dana untuk melakukan penelitian dan publikasi',
+            'sasaran9' => 'Meningkatnya kuantitas dan kualitas pengabdian kepada masyarakat yang dapat mengoptimalkan potensi lokal untuk meningkatkan kesejahteraan masyarakat',
+            'sasaran10' => 'Meningkatnya alokasi dana untuk melakukan pengabdian',
+            'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
+            'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
+            'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
             'prodi_id' => '7'
-        ]);
-
-        Visimisi::create([
-            'visi' => 'Menjadi Program Studi Teknik Elektro Unggul Pada Bidang Ilmu Teknik Elektro di Tingkat Internasional Berbasis Potensi Lokal',
-            'misi1' => 'Menjadi Program Studi Teknik Elektro pada bidang ilmu Teknik Elektro di Tingkat Internasional berbasis potensi lokal.',
-            'misi2' => 'Menyelenggarakan penelitian berbasis potensi lokal melalui penerapan ilmu Teknik elektro yang diakui secara nasional dan internasional.',
-            'misi3' => 'Melaksanakan pengabdian kepada masyarakat untuk meningkatkan pengetahuan dan keterampilan masyarakat sebagai upaya proses pemantapan dan pemanfaatan potensi lokal.',
-            'misi4' => 'Meningkatkan efisiensi, akuntabilitas, kapabilitas, transparansi, dan berkeadilan untuk mewujudkan tata kelola penyelenggaraan pendidikan yang baik',
-            'tujuan1' => 'Menghasilkan lulusan yang memiliki kompetensi dan/atau profesional, beretika dan berkarakter dalam bidang ilmu Teknik Elektro',
-            'tujuan2' => 'Menghasilkan karya ilmiah dan karya kreatif yang unggul dan bereputasi nasional dan internasional',
-            'tujuan3' => 'Menerapkan hasil-hasil penelitian untuk meningkatkan taraf hidup masyarakat',
-            'tujuan4' => 'Mewujudkan efektivitas tata kelola penyelenggaraan pendidikan sehingga lebih efisien, akuntabel, kapabel, transparan, dan berkeadilan',
-            'sasaran1' => 'Meningkatnya kualitas dan kuantitas dosen dalam pendidikan dan pembelajaran',
-            'sasaran2' => 'Meningkatnya mutu akademik, daya saing, dan kompetensi',
-            'sasaran3' => 'Meningkatnya kualitas pembelajaran dan lulusan yang berdaya saing',
-            'sasaran4' => 'Meningkatnya keterlibatan mahasiswa dalam kegiatan ilmiah dan kewirausahaan',
-            'sasaran5' => 'Meningkatnya jumlah penelitian dan karya ilmiah dosen',
-            'sasaran6' => 'Meningkatnya jumlah penelitian unggulan berbasis potensi lokal',
-            'sasaran7' => 'Meningkatnya jumlah publikasi pada jurnal/prosiding bereputasi nasional dan internasional serta paten',
-            'sasaran8' => 'Meningkatnya alokasi dana untuk melakukan penelitian dan publikasi',
-            'sasaran9' => 'Meningkatnya kuantitas dan kualitas pengabdian kepada masyarakat yang dapat mengoptimalkan potensi lokal untuk meningkatkan kesejahteraan masyarakat',
-            'sasaran10' => 'Meningkatnya alokasi dana untuk melakukan pengabdian',
-            'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
-            'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
-            'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '8'
-        ]);
-
-        Visimisi::create([
-            'visi' => 'Menjadi Program Studi Teknik Elektro Unggul Pada Bidang Ilmu Teknik Elektro di Tingkat Internasional Berbasis Potensi Lokal',
-            'misi1' => 'Menjadi Program Studi Teknik Elektro pada bidang ilmu Teknik Elektro di Tingkat Internasional berbasis potensi lokal.',
-            'misi2' => 'Menyelenggarakan penelitian berbasis potensi lokal melalui penerapan ilmu Teknik elektro yang diakui secara nasional dan internasional.',
-            'misi3' => 'Melaksanakan pengabdian kepada masyarakat untuk meningkatkan pengetahuan dan keterampilan masyarakat sebagai upaya proses pemantapan dan pemanfaatan potensi lokal.',
-            'misi4' => 'Meningkatkan efisiensi, akuntabilitas, kapabilitas, transparansi, dan berkeadilan untuk mewujudkan tata kelola penyelenggaraan pendidikan yang baik',
-            'tujuan1' => 'Menghasilkan lulusan yang memiliki kompetensi dan/atau profesional, beretika dan berkarakter dalam bidang ilmu Teknik Elektro',
-            'tujuan2' => 'Menghasilkan karya ilmiah dan karya kreatif yang unggul dan bereputasi nasional dan internasional',
-            'tujuan3' => 'Menerapkan hasil-hasil penelitian untuk meningkatkan taraf hidup masyarakat',
-            'tujuan4' => 'Mewujudkan efektivitas tata kelola penyelenggaraan pendidikan sehingga lebih efisien, akuntabel, kapabel, transparan, dan berkeadilan',
-            'sasaran1' => 'Meningkatnya kualitas dan kuantitas dosen dalam pendidikan dan pembelajaran',
-            'sasaran2' => 'Meningkatnya mutu akademik, daya saing, dan kompetensi',
-            'sasaran3' => 'Meningkatnya kualitas pembelajaran dan lulusan yang berdaya saing',
-            'sasaran4' => 'Meningkatnya keterlibatan mahasiswa dalam kegiatan ilmiah dan kewirausahaan',
-            'sasaran5' => 'Meningkatnya jumlah penelitian dan karya ilmiah dosen',
-            'sasaran6' => 'Meningkatnya jumlah penelitian unggulan berbasis potensi lokal',
-            'sasaran7' => 'Meningkatnya jumlah publikasi pada jurnal/prosiding bereputasi nasional dan internasional serta paten',
-            'sasaran8' => 'Meningkatnya alokasi dana untuk melakukan penelitian dan publikasi',
-            'sasaran9' => 'Meningkatnya kuantitas dan kualitas pengabdian kepada masyarakat yang dapat mengoptimalkan potensi lokal untuk meningkatkan kesejahteraan masyarakat',
-            'sasaran10' => 'Meningkatnya alokasi dana untuk melakukan pengabdian',
-            'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
-            'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
-            'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '9'
         ]);
 
         Visimisi::create([
@@ -188,7 +188,7 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '10'
+            'prodi_id' => '8'
         ]);
 
         Visimisi::create([
@@ -214,7 +214,7 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '11'
+            'prodi_id' => '9'
         ]);
 
         Visimisi::create([
@@ -243,7 +243,7 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '12'
+            'prodi_id' => '10'
         ]);
 
         Visimisi::create([
@@ -272,7 +272,7 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '13'
+            'prodi_id' => '11'
         ]);
 
         Visimisi::create([
@@ -298,7 +298,7 @@ class VisimisiSeeder extends Seeder
             'sasaran11' => 'Meningkatkan efektivitas dan efisiensi organisasi dan tata kerja Program Studi',
             'sasaran12' => 'Meningkatkan kerjasama yang saling menguntungkan dengan berbagai pihak',
             'sasaran13' => 'Meningkatnya kualitas dan kuantitas tenaga kependidikan',
-            'prodi_id' => '3'
+            'prodi_id' => '1'
         ]);
     }
 }

@@ -12,7 +12,7 @@ class ShowDosenController extends Controller
 {
     public function sisteminformasi()
     {
-        $dosen = Dosen::all()->where('prodi_id', '11');
+        $dosen = Dosen::all()->where('prodi_id', '9');
         $prodi = Prodi::all()->where('id', '11');
         $page = 'Dosen Sistem Informasi';
         $berita = Berita::all();
@@ -21,7 +21,7 @@ class ShowDosenController extends Controller
 
     public function tsipil()
     {
-        $dosen = Dosen::all()->where('prodi_id', '4');
+        $dosen = Dosen::all()->where('prodi_id', '2');
         $prodi = Prodi::all()->where('id', '4');
         $page = 'Dosen Teknik Sipil';
         $berita = Berita::all();
@@ -30,7 +30,7 @@ class ShowDosenController extends Controller
 
     public function tmesin()
     {
-        $dosen = Dosen::all()->where('prodi_id', '5');
+        $dosen = Dosen::all()->where('prodi_id', '3');
         $prodi = Prodi::all()->where('id', '5');
         $page = 'Dosen Teknik Mesin';
         $berita = Berita::all();
@@ -39,7 +39,7 @@ class ShowDosenController extends Controller
 
     public function tkimia()
     {
-        $dosen = Dosen::all()->where('prodi_id', '6');
+        $dosen = Dosen::all()->where('prodi_id', '4');
         $prodi = Prodi::all()->where('id', '6');
         $page = 'Dosen Teknik Kimia';
         $berita = Berita::all();
@@ -48,7 +48,7 @@ class ShowDosenController extends Controller
 
     public function tindustri()
     {
-        $dosen = Dosen::all()->where('prodi_id', '7');
+        $dosen = Dosen::all()->where('prodi_id', '5');
         $prodi = Prodi::all()->where('id', '7');
         $page = 'Dosen Teknik Industri';
         $berita = Berita::all();
@@ -57,7 +57,7 @@ class ShowDosenController extends Controller
 
     public function telektro()
     {
-        $dosen = Dosen::all()->where('prodi_id', '8');
+        $dosen = Dosen::all()->where('prodi_id', '6');
         $prodi = Prodi::all()->where('id', '8');
         $page = 'Dosen Teknik Elektro';
         $berita = Berita::all();
@@ -66,7 +66,7 @@ class ShowDosenController extends Controller
 
     public function tinformatika()
     {
-        $dosen = Dosen::all()->where('prodi_id', '9');
+        $dosen = Dosen::all()->where('prodi_id', '7');
         $prodi = Prodi::all()->where('id', '9');
         $page = 'Dosen Teknik Informatika';
         $berita = Berita::all();
@@ -74,7 +74,7 @@ class ShowDosenController extends Controller
     }
     public function tarsitektur()
     {
-        $dosen = Dosen::all()->where('prodi_id', '10');
+        $dosen = Dosen::all()->where('prodi_id', '8');
         $prodi = Prodi::all()->where('id', '10');
         $page = 'Dosen Teknik Arsitektur';
         $berita = Berita::all();
@@ -83,7 +83,7 @@ class ShowDosenController extends Controller
 
     public function tmaterial()
     {
-        $dosen = Dosen::all()->where('prodi_id', '12');
+        $dosen = Dosen::all()->where('prodi_id', '10');
         $prodi = Prodi::all()->where('id', '12');
         $page = 'Dosen Teknik Material';
         $berita = Berita::all();
@@ -92,7 +92,7 @@ class ShowDosenController extends Controller
 
     public function tlogistik()
     {
-        $dosen = Dosen::all()->where('prodi_id', '13');
+        $dosen = Dosen::all()->where('prodi_id', '11');
         $prodi = Prodi::all()->where('id', '13');
         $page = 'Dosen Teknik Logistik';
         $berita = Berita::all();

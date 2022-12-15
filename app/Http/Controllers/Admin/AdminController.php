@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Berita;
 use App\Models\Dosen;
+use App\Models\Download;
 use App\Models\Hmj;
 use App\Models\Konten;
 use App\Models\Prestasi;
@@ -61,14 +62,14 @@ class AdminController extends Controller
 
     public function sejarahfakultas()
     {
-        $sejarah = Sejarah::all()->where('prodi_id', '3');
+        $sejarah = Sejarah::all()->where('prodi_id', '1');
         $page = "Sejarah FT UNIMAL";
         return view('admin.sejarah.fakultas', compact('sejarah', 'page'));
     }
 
     public function visimisifakultas()
     {
-        $visimisi = Visimisi::all()->where('prodi_id', '3');
+        $visimisi = Visimisi::all()->where('prodi_id', '1');
         $page = "VISI MISI FT UNIMAL";
         return view('admin.visimisi.fakultas', compact('visimisi', 'page'));
     }

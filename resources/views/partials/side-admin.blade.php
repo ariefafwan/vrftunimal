@@ -56,5 +56,11 @@
                 <span class="ml-2">Prestasi</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('download.index') }}">
+                <i class="fa fa-file-archive-o" aria-hidden="true"></i>
+                <span class="ml-2">File Downloads</span>
+            </a>
+        </li>
     </ul>
 </div>

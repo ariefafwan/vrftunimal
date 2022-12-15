@@ -12,7 +12,7 @@ class ShowPrestasiController extends Controller
 {
     public function sisteminformasi()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '11');
+        $prestasi = Prestasi::all()->where('prodi_id', '9');
         $prodi = Prodi::all()->where('id', '11');
         $page = 'Prestasi Mahasiswa Sistem Informasi';
         $berita = Berita::all();
@@ -21,7 +21,7 @@ class ShowPrestasiController extends Controller
 
     public function tsipil()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '4');
+        $prestasi = Prestasi::all()->where('prodi_id', '2');
         $prodi = Prodi::all()->where('id', '4');
         $page = 'Prestasi Mahasiswa Teknik Sipil';
         $berita = Berita::all();
@@ -30,7 +30,7 @@ class ShowPrestasiController extends Controller
 
     public function tmesin()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '5');
+        $prestasi = Prestasi::all()->where('prodi_id', '3');
         $prodi = Prodi::all()->where('id', '5');
         $page = 'Prestasi Mahasiswa Teknik Mesin';
         $berita = Berita::all();
@@ -39,7 +39,7 @@ class ShowPrestasiController extends Controller
 
     public function tkimia()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '6');
+        $prestasi = Prestasi::all()->where('prodi_id', '4');
         $prodi = Prodi::all()->where('id', '6');
         $page = 'Prestasi Mahasiswa Teknik Kimia';
         $berita = Berita::all();
@@ -48,7 +48,7 @@ class ShowPrestasiController extends Controller
 
     public function tindustri()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '7');
+        $prestasi = Prestasi::all()->where('prodi_id', '5');
         $prodi = Prodi::all()->where('id', '7');
         $page = 'Prestasi Mahasiswa Teknik Industri';
         $berita = Berita::all();
@@ -57,7 +57,7 @@ class ShowPrestasiController extends Controller
 
     public function telektro()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '8');
+        $prestasi = Prestasi::all()->where('prodi_id', '6');
         $prodi = Prodi::all()->where('id', '8');
         $page = 'Prestasi Mahasiswa Teknik Elektro';
         $berita = Berita::all();
@@ -66,7 +66,7 @@ class ShowPrestasiController extends Controller
 
     public function tinformatika()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '9');
+        $prestasi = Prestasi::all()->where('prodi_id', '7');
         $prodi = Prodi::all()->where('id', '9');
         $page = 'Prestasi Mahasiswa Teknik Informatika';
         $berita = Berita::all();
@@ -74,7 +74,7 @@ class ShowPrestasiController extends Controller
     }
     public function tarsitektur()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '10');
+        $prestasi = Prestasi::all()->where('prodi_id', '8');
         $prodi = Prodi::all()->where('id', '10');
         $page = 'Prestasi Mahasiswa Teknik Arsitektur';
         $berita = Berita::all();
@@ -83,7 +83,7 @@ class ShowPrestasiController extends Controller
 
     public function tmaterial()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '12');
+        $prestasi = Prestasi::all()->where('prodi_id', '10');
         $prodi = Prodi::all()->where('id', '12');
         $page = 'Prestasi Mahasiswa Teknik Material';
         $berita = Berita::all();
@@ -92,7 +92,7 @@ class ShowPrestasiController extends Controller
 
     public function tlogistik()
     {
-        $prestasi = Prestasi::all()->where('prodi_id', '13');
+        $prestasi = Prestasi::all()->where('prodi_id', '11');
         $prodi = Prodi::all()->where('id', '13');
         $page = 'Prestasi Mahasiswa Teknik Logistik';
         $berita = Berita::all();

@@ -119,7 +119,7 @@
           <li><a href="#">Kegiatan Mahasiswa</a></li>
         </ul>
       </li>
-      <li><a class="nav-link" href="#">Downloads</a></li>
+      <li><a class="nav-link" href="{{ route('download') }}">Downloads</a></li>
     </ul>
     <i class="fa fa-bars mobile-nav-toggle"></i>
   </nav><!-- .navbar -->
