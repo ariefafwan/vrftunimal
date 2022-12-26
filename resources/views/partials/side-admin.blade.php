@@ -13,6 +13,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{ route('pimpinan.index') }}">
+                <i class="fa fa-address-card" aria-hidden="true"></i>
+                <span class="ml-2">Pimpinan FT</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{ route('prodi.index') }}">
                 <i class="fa fa-file" aria-hidden="true"></i>
                 <span class="ml-2">Prodi</span>
@@ -54,6 +60,18 @@
             <a class="nav-link" href="{{ route('prestasiprodi.index') }}">
                 <i class="fa fa-star" aria-hidden="true"></i>
                 <span class="ml-2">Prestasi</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('akred.index') }}">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <span class="ml-2">Akreditasi</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('kalenderakademik.index') }}">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <span class="ml-2">Kalender Akademik</span>
             </a>
         </li>
         <li class="nav-item">

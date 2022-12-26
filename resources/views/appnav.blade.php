@@ -6,7 +6,7 @@
           <li><a href="{{ route('sejarah') }}">Sejarah</a></li>
           <li><a href="{{ route('visimisi') }}">Visi Misi</a></li>
           <li><a href="{{ route('welcome') }}">Struktur Organisasi</a></li>
-          <li><a href="#">Profil Pimpinan Fakultas</a></li>
+          <li><a href="{{ route('pimpinan') }}">Profil Pimpinan Fakultas</a></li>
           <li class="dropdown"><a href="#"><span>Dosen</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
                 <ul>
                   <li><a href="{{ route('tsipil') }}">Prodi Teknik Sipil</a></li>
@@ -22,7 +22,7 @@
               </li>
           <li><a href="#">Fasilitas Penunjang</a></li>
           <li><a href="{{ route('prestasi') }}">Prestasi Mahasiswa</a></li>
-          <li><a href="#">Tenaga Kependidikan</a></li>
+          <li><a href="https://teknik.unimal.ac.id/sifatek/wp-login.php?redirect_to=https%3A%2F%2Fteknik.unimal.ac.id%2Fsifatek%2Findex.php%2Flog-catatan-harian-tendik%2F&reauth=1">Tenaga Kependidikan</a></li>
         </ul>
       </li>
       <li class="dropdown"><a href="#"><span>Jurusan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -66,60 +66,45 @@
           </li>
         </ul>
       </li>
-      <li class="dropdown"><a href="#"><span>Akademik</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      <li class="dropdown"><a href="#"><span>Akses</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul>
-          <li><a href="#">Informasi Akademik</a></li>
-          <li class="dropdown"><a href="#"><span>Penelitian & Pengabdian</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
-            <ul>
-              <li><a href="#">LPPM</a></li>
-              <li><a href="#">Penelitian</a></li>
-              <li><a href="#">Pengabdian</a></li>
-              <li><a href="#">HaKI</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Daftar Yudisium</a></li>
-          <li><a href="#">Kebijakan Akademik</a></li>
-          <li><a href="#">Panduan Akademik</a></li>
-          <li><a href="#">Akreditasi</a></li>
-          <li><a href="#">Informasi Umum</a></li>
+          <li><a href="http://sia.unimal.ac.id/">SIA</a></li>
+          <li><a href="https://elearning.unimal.ac.id/">E-Learning</a></li>
+          <li><a href="http://lib.unimal.ac.id/pengunjung/">E-Library</a></li>
+          <li><a href="https://simpeg.unimal.ac.id/">SIMPEG</a></li>
+          <li><a href="http://portal.unimal.ac.id/">PORTAL</a></li>
+          <li><a href="https://survei.unimal.ac.id/">Survey UNIMAL</a></li> 
+          <li><a href="https://ojs.unimal.ac.id/">Akses Jurnal</a></li> 
         </ul>
       </li>
-      <li class="dropdown"><a href="#"><span>Layanan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+      <li class="dropdown"><a href="#"><span>Layanan & Kemahasiswaan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
         <ul>
-          <li><a href="#">SIA</a></li>
-          <li><a href="#">E-Learning</a></li>
-          <li><a href="#">E-Library</a></li>
-          <li><a href="#">SIMPEG</a></li>
-          <li><a href="#">PORTAL</a></li>
-          <li><a href="#">Survey UNIMAL</a></li>
-          <li><a href="#">Layanan Kemahasiswaan</a></li>
-        </ul>
-      </li>
-      <li class="dropdown"><a href="#"><span>Kemahasiswaan</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-        <ul>
-          <li><a href="#">Kampus Merdeka</a></li>
+          <li><a href="https://kampusmerdeka.kemdikbud.go.id/">Kampus Merdeka</a></li>
           <li class="dropdown"><a href="#"><span>Organisasi Mahasiswa</span><i class="fa fa-angle-down" aria-hidden="true"></i></a>
             <ul>
-              <li><a href="#">BEM FT UNIMAL</a></li>
-              <li><a href="#">DPM FT UNIMAL</a></li>
-              <li><a href="#">HIMATESIP</a></li>
-              <li><a href="#">HIMATESIN</a></li>
-              <li><a href="#">HIMTI</a></li>
-              <li><a href="#">HIMATEMIA</a></li>
-              <li><a href="#">HIMATRO</a></li>
-              <li><a href="#">HIMATEKA</a></li>
-              <li><a href="#">HIMATIF</a></li>
-              <li><a href="#">HIMASI</a></li>
-              <li><a href="#">HIMATERIAL</a></li>
-              <li><a href="#">Teknik Logistik</a></li>
+              <li><a href="https://www.instagram.com/bemftunimal/?hl=id">BEM FT UNIMAL</a></li>
+              <li><a href="https://www.instagram.com/dpmftunimal/?hl=id">DPM FT UNIMAL</a></li>
+              <li><a href="https://www.instagram.com/himatesipunimal/?hl=id">HIMATESIP</a></li>
+              <li><a href="https://www.instagram.com/himatesinunimal/?hl=id">HIMATESIN</a></li>
+              <li><a href="https://www.instagram.com/himti_unimal/?hl=id">HIMTI</a></li>
+              <li><a href="https://teknik-kimia.unimal.ac.id/index.php/himatemia">HIMATEMIA</a></li>
+              <li><a href="https://himatrounimal.wordpress.com/">HIMATRO</a></li>
+              <li><a href="https://www.instagram.com/himateka_unimal/?hl=id">HIMATEKA</a></li>
+              <li><a href="http://lom-himatif012a3.blogspot.com/">HIMATIF</a></li>
+              <li><a href="https://himasi.unimal.ac.id/">HIMASI</a></li>
+              <li><a href="https://www.instagram.com/teknikmaterial_unimal/?hl=id">HMTM</a></li>
+              <li><a href="https://www.instagram.com/himatelogis_unimal/?hl=id">HIMATELOGIS</a></li>
             </ul>
           </li>
-          <li><a href="#">Alumni</a></li>
-          <li><a href="#">Data Mahasiswa</a></li>
-          <li><a href="#">Kegiatan Mahasiswa</a></li>
+          <li><a href="https://wisuda.unimal.ac.id/login">Daftar Wisuda</a></li>
+          <li><a href="{{ route('akreditasi') }}">Akreditasi</a></li>
+          <li><a href="https://pmb.unimal.ac.id/">Penerimaan Mahasiswa Baru</a></li>
+          <li><a href="https://tracer.unimal.ac.id/login">Penelusuran Alumni</a></li>
+          <li><a href="{{ route('kalender') }}">Kalender Akademik</a></li>
         </ul>
       </li>
       <li><a class="nav-link" href="{{ route('download') }}">Downloads</a></li>
     </ul>
     <i class="fa fa-bars mobile-nav-toggle"></i>
-  </nav><!-- .navbar -->
+  </nav>
+  <!-- .navbar -->

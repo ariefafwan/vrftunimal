@@ -1,22 +1,29 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AkreditasiController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\DosenController;
 use App\Http\Controllers\Admin\DownloadController;
+use App\Http\Controllers\Admin\KalenderAkademikController;
 use App\Http\Controllers\Admin\KatberitaController;
 use App\Http\Controllers\Admin\NewsController;
+use App\Http\Controllers\Admin\PanduanController;
+use App\Http\Controllers\Admin\PimpinanController;
 use App\Http\Controllers\Admin\PrestasiController;
 use App\Http\Controllers\Admin\ProdiController;
 use App\Http\Controllers\Admin\SejarahController;
 use App\Http\Controllers\Admin\VisiMisiController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Konten\ShowBeritaController;
 use App\Http\Controllers\Konten\ShowDosenController;
 use App\Http\Controllers\Konten\ShowDownloadController;
 use App\Http\Controllers\Konten\ShowPrestasiController;
 use App\Http\Controllers\Konten\ShowSejarahController;
 use App\Http\Controllers\Konten\ShowVisiController;
 use App\Http\Controllers\ProfilController;
+use App\Models\Kalender;
+use App\Models\Pimpinan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -41,6 +48,10 @@ Route::get('/sejarah', [ProfilController::class, 'sejarah'])->name('sejarah');
 Route::get('/visimisi', [ProfilController::class, 'visimisi'])->name('visimisi');
 Route::get('/prestasi', [ProfilController::class, 'prestasi'])->name('prestasi');
 Route::get('/download', [ProfilController::class, 'download'])->name('download');
+Route::get('/pimpinan', [ProfilController::class, 'pimpinan'])->name('pimpinan');
+Route::get('/beritaall', [ProfilController::class, 'berita'])->name('beritaall');
+Route::get('/kalender', [ProfilController::class, 'kalender'])->name('kalender');
+Route::get('/akreditasi', [ProfilController::class, 'akreditasi'])->name('akreditasi');
 Route::get('/berita/{id}', [AdminController::class, 'show'])->name('show');
 //konten dosen prodi
 Route::get('/dosentsipil', [ShowDosenController::class, 'tsipil'])->name('tsipil');
@@ -97,6 +108,17 @@ Route::get('/downloadtarsitektur', [ShowDownloadController::class, 'tarsitektur'
 Route::get('/downloadsinformasi', [ShowDownloadController::class, 'sisteminformasi'])->name('downloadsinformasi');
 Route::get('/downloadtmaterial', [ShowDownloadController::class, 'tmaterial'])->name('downloadtmaterial');
 Route::get('/downloadtlogistik', [ShowDownloadController::class, 'tlogistik'])->name('downloadtlogistik');
+//konten berita prodi
+Route::get('/beritatsipil', [ShowBeritaController::class, 'tsipil'])->name('beritatsipil');
+Route::get('/beritatmesin', [ShowBeritaController::class, 'tmesin'])->name('beritatmesin');
+Route::get('/beritatkimia', [ShowBeritaController::class, 'tkimia'])->name('beritatkimia');
+Route::get('/beritatindustri', [ShowBeritaController::class, 'tindustri'])->name('beritatindustri');
+Route::get('/beritatelektro', [ShowBeritaController::class, 'telektro'])->name('beritatelektro');
+Route::get('/beritatinformatika', [ShowBeritaController::class, 'tinformatika'])->name('beritatinformatika');
+Route::get('/beritatarsitektur', [ShowBeritaController::class, 'tarsitektur'])->name('beritatarsitektur');
+Route::get('/beritasinformasi', [ShowBeritaController::class, 'sisteminformasi'])->name('beritasinformasi');
+Route::get('/beritatmaterial', [ShowBeritaController::class, 'tmaterial'])->name('beritatmaterial');
+Route::get('/beritatlogistik', [ShowBeritaController::class, 'tlogistik'])->name('beritatlogistik');
 
 
 Auth::routes();
@@ -115,5 +137,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/admin/visimisifakultas', [AdminController::class, 'visimisifakultas'])->name('visimisifakultas');
     Route::resource('admin/prestasiprodi', PrestasiController::class);
     Route::resource('admin/download', DownloadController::class);
+    Route::resource('admin/pimpinan', PimpinanController::class);
+    Route::resource('admin/kalenderakademik', KalenderAkademikController::class);
+    Route::resource('admin/akred', AkreditasiController::class);
 });
 

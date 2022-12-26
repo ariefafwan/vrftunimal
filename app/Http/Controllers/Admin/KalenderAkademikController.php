@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Kalender;
+use App\Models\Prestasi;
 use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class ProdiController extends Controller
+
+class KalenderAkademikController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +18,9 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        $page   = "Seluruh Prodi";
-        $prodi  = Prodi::all();
-        return view('admin.prodi.prodi', compact('page', 'prodi'));
+        $page   = "Kalender Akademik";
+        $kalender  = Kalender::all();
+        return view('admin.kalender.kalender', compact('page', 'kalender'));
     }
 
     /**
@@ -27,9 +30,7 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        // $page   = "Tambah Prodi";
-        // $prodi  = Prodi::all();
-        // return view('admin.prodi.cprodi', compact('page', 'prodi'));
+        //
     }
 
     /**
@@ -40,13 +41,17 @@ class ProdiController extends Controller
      */
     public function store(Request $request)
     {
+        $nm = $request->file;
+        $namaFile = $nm->getClientOriginalName();
+        
+        $dtUpload = new Kalender;
+        $dtUpload->name = $request->name;
+        $dtUpload->file = $namaFile;
 
-        // $dtUpload = new Prodi();
-        // $dtUpload->name = $request->name;
+        $nm->move(public_path() . '/file/kalender', $namaFile);
+        $dtUpload->save();
 
-        // $dtUpload->save();
-
-        // return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
+        return redirect()->route('kalenderakademik.index')->with(['message' => 'File Updated successfully!']);
     }
 
     /**
@@ -68,10 +73,9 @@ class ProdiController extends Controller
      */
     public function edit($id)
     {
-        $prodi  = Prodi::findOrFail($id);
-        $page   = "Edit Prodi";
-
-        return view('admin.prodi.eprodi', compact('prodi', 'page'));
+        $page   = "Edit Kalender Akademik";
+        $kalender  = Kalender::findOrFail($id);
+        return view('admin.kalender.edit', compact('page', 'kalender'));
     }
 
     /**
@@ -83,12 +87,17 @@ class ProdiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $dtUpload = Prodi::find($id);
+        $nm = $request->file;
+        $namaFile = $nm->getClientOriginalName();
+        
+        $dtUpload = Kalender::find($id);
         $dtUpload->name = $request->name;
+        $dtUpload->file = $namaFile;
 
+        $nm->move(public_path() . '/file/kalender', $namaFile);
         $dtUpload->save();
 
-        return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
+        return redirect()->route('kalenderakademik.index')->with(['message' => 'File Updated successfully!']);
     }
 
     /**
@@ -99,10 +108,14 @@ class ProdiController extends Controller
      */
     public function destroy($id)
     {
-        $prodi = Prodi::findOrFail($id);
+        $kalender = Kalender::findOrFail($id);
 
-        $prodi->delete();
+        if(file_exists(public_path('file/kalender/') . $kalender->file)){
+            unlink(public_path('file/kalender/') . $kalender->file);
+        }
 
-        return back()->with(['message' => 'News deleted successfully!']);
+        $kalender->delete();
+
+        return back()->with(['message' => 'File deleted successfully!']);
     }
 }

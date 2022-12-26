@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Prodi;
+use App\Models\Pimpinan;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class ProdiController extends Controller
+class PimpinanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        $page   = "Seluruh Prodi";
-        $prodi  = Prodi::all();
-        return view('admin.prodi.prodi', compact('page', 'prodi'));
+        $page   = "Pimpinan Fakultas";
+        $pimpinan  = Pimpinan::all();
+        return view('admin.pimpinan.pimpinan', compact('page', 'pimpinan'));
     }
 
     /**
@@ -27,9 +27,7 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        // $page   = "Tambah Prodi";
-        // $prodi  = Prodi::all();
-        // return view('admin.prodi.cprodi', compact('page', 'prodi'));
+        //
     }
 
     /**
@@ -40,13 +38,7 @@ class ProdiController extends Controller
      */
     public function store(Request $request)
     {
-
-        // $dtUpload = new Prodi();
-        // $dtUpload->name = $request->name;
-
-        // $dtUpload->save();
-
-        // return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
+        //
     }
 
     /**
@@ -68,10 +60,9 @@ class ProdiController extends Controller
      */
     public function edit($id)
     {
-        $prodi  = Prodi::findOrFail($id);
-        $page   = "Edit Prodi";
-
-        return view('admin.prodi.eprodi', compact('prodi', 'page'));
+        $page   = "Pimpinan Fakultas";
+        $pimpinan  = Pimpinan::findOrFail($id);
+        return view('admin.pimpinan.edit', compact('page', 'pimpinan'));
     }
 
     /**
@@ -83,12 +74,20 @@ class ProdiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $dtUpload = Prodi::find($id);
+        $nm = $request->profile_img;
+        $namaFile = $nm->getClientOriginalName();
+        
+        $dtUpload = Pimpinan::find($id);
         $dtUpload->name = $request->name;
+        $dtUpload->nip = $request->nip;
+        $dtUpload->nidn = $request->nidn;
+        $dtUpload->jabatan = $request->jabatan;
+        $dtUpload->profile_img = $namaFile;
 
+        $nm->move(public_path() . '/img/profil/pimpinan', $namaFile);
         $dtUpload->save();
 
-        return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
+        return redirect()->route('pimpinan.index');
     }
 
     /**
@@ -99,10 +98,6 @@ class ProdiController extends Controller
      */
     public function destroy($id)
     {
-        $prodi = Prodi::findOrFail($id);
-
-        $prodi->delete();
-
-        return back()->with(['message' => 'News deleted successfully!']);
+        //
     }
 }

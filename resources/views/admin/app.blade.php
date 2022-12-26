@@ -75,7 +75,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{ $page }} </li>
                     </ol>
                     <h1 class="h2">{{ $page }}</h1>
                 </nav>
