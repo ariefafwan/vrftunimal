@@ -38,4 +38,14 @@ class Prodi extends Model
     {
         return $this->hasMany(Download::class);
     }
+    
+    public function pimpinan()
+    {
+        return $this->hasMany(Pimpinan::class);
+    }
+
+    public function akred()
+    {
+        return $this->hasMany(Akreditasi::class);
+    }
 }

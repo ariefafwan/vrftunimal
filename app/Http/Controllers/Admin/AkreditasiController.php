@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Akreditasi;
 use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class ProdiController extends Controller
+class AkreditasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +16,9 @@ class ProdiController extends Controller
      */
     public function index()
     {
-        $page   = "Seluruh Prodi";
-        $prodi  = Prodi::all();
-        return view('admin.prodi.prodi', compact('page', 'prodi'));
+        $akred = Akreditasi::all();
+        $page = "Akreditasi";
+        return view('admin.akreditasi.akreditasi', compact('akred', 'page'));
     }
 
     /**
@@ -27,9 +28,7 @@ class ProdiController extends Controller
      */
     public function create()
     {
-        // $page   = "Tambah Prodi";
-        // $prodi  = Prodi::all();
-        // return view('admin.prodi.cprodi', compact('page', 'prodi'));
+        //
     }
 
     /**
@@ -40,13 +39,7 @@ class ProdiController extends Controller
      */
     public function store(Request $request)
     {
-
-        // $dtUpload = new Prodi();
-        // $dtUpload->name = $request->name;
-
-        // $dtUpload->save();
-
-        // return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
+        //
     }
 
     /**
@@ -68,10 +61,10 @@ class ProdiController extends Controller
      */
     public function edit($id)
     {
-        $prodi  = Prodi::findOrFail($id);
-        $page   = "Edit Prodi";
-
-        return view('admin.prodi.eprodi', compact('prodi', 'page'));
+        $akred = Akreditasi::findOrFail($id);
+        $prodi = Prodi::all();
+        $page = "Edit Akreditasi";
+        return view('admin.akreditasi.edit', compact('akred', 'prodi', 'page'));
     }
 
     /**
@@ -83,12 +76,18 @@ class ProdiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $dtUpload = Prodi::find($id);
+        $nm = $request->file;
+        $namaFile = $nm->getClientOriginalName();
+        
+        $dtUpload = Akreditasi::find($id);
         $dtUpload->name = $request->name;
+        $dtUpload->prodi_id = $request->prodi_id;
+        $dtUpload->file = $namaFile;
 
+        $nm->move(public_path() . '/file/akreditasi', $namaFile);
         $dtUpload->save();
 
-        return redirect()->route('prodi.index')->with(['message' => 'News created successfully!']);
+        return redirect()->route('akred.index')->with(['message' => 'File Updated successfully!']);
     }
 
     /**
@@ -99,10 +98,6 @@ class ProdiController extends Controller
      */
     public function destroy($id)
     {
-        $prodi = Prodi::findOrFail($id);
-
-        $prodi->delete();
-
-        return back()->with(['message' => 'News deleted successfully!']);
+        //
     }
 }

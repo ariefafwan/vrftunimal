@@ -89,15 +89,14 @@ class DownloadController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        
+    {        
         $nm = $request->file;
         $namaFile = $nm->getClientOriginalName();
         
         $dtUpload = Download::find($id);
         $dtUpload->name = $request->name;
         $dtUpload->prodi_id = $request->prodi_id;
-        $dtUpload->file = $request->file;
+        $dtUpload->file = $namaFile;
 
         $nm->move(public_path() . '/file/download', $namaFile);
         $dtUpload->save();

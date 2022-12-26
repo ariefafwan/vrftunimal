@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Hmj extends Model
+class Pimpinan extends Model
 {
     use HasFactory;
+
+    public function prodi()
+    {
+        return $this->belongsTo(Prodi::class);
+    }
 }

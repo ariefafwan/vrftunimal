@@ -12,8 +12,9 @@
 <section class="content">
     <div class="row">
 
-        <form action="{{ route('download.store') }}" method="POST" enctype="multipart/form-data" role="form">
+        <form action="{{ route('kalenderakademik.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
 
             <div class="col-md-6">
                 <div class="box box-primary">
@@ -22,16 +23,7 @@
                             <label for="newstitle">File Name</label>
                             <input type="text" name="name" class="form-control" id="newstitle" required>
                         </div>
-                        <div class="form-group mb-2">
-                            <label>Prodi</label>
-                            <select name="prodi_id" required class="form-select" style="width: 100%;">
-                                <option selected aria-required="true">Pilih Prodi</option>
-                                @foreach($prodi as $p)
-                                    <option value="{{ $p->id }}">{{ $p->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
+                        <div class="form-group mt-3">
                             <label for="newsimage">File</label>
                             <input type="file" name="file" id="file" required>
                             <p class="help-block">(file must be in .pdf format)</p>
