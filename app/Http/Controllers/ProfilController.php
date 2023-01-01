@@ -114,4 +114,5 @@ class ProfilController extends Controller
         $berita = Berita::all();
         return view('akreditasi', compact('page', 'akreditasi', 'berita'));   
     }
+
 }
