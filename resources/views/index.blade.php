@@ -184,7 +184,6 @@
                       <li><a href="{{ route('tlogistik') }}">Prodi Teknik Logistik</a></li>
                     </ul>
                   </li>
-              <li><a href="#">Fasilitas Penunjang</a></li>
               <li><a href="{{ route('prestasi') }}">Prestasi Mahasiswa</a></li>
               <li><a href="https://teknik.unimal.ac.id/sifatek/wp-login.php?redirect_to=https%3A%2F%2Fteknik.unimal.ac.id%2Fsifatek%2Findex.php%2Flog-catatan-harian-tendik%2F&reauth=1">Tenaga Kependidikan</a></li>
             </ul>
@@ -398,7 +397,7 @@
             <!-- berita -->
           </div>
 
-          <div class="btn-group">
+          <div class="d-flex justify-content-center">
             <a href="{{ route('beritaall') }}" class="btn btn-primary mr-2">
               <i class="fa fa-list" aria-hidden="true"></i>
                 Lihat Semua
@@ -414,7 +413,7 @@
       <div class="container">
 
         <div class="section-title text-dark">
-          <h2>Rencananya Kata Sambutan Dekan</h2>
+          <h2>Kata Sambutan Dekan</h2>
         </div>
 
         <div class="card mb-3" style="max-width: 100%;">
@@ -424,7 +423,8 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h1 class="card-title text-dark">Card title</h1>
+                <h1 class="card-title text-dark">Dr. Muhammad, S.T., M.Sc</h1>
+                <h6 class="card-title text-muted">Dekan Fakultas Teknik</h6>
                 <h5 class="card-text text-dark">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</h5>
               </div>
             </div>

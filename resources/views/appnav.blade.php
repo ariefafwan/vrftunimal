@@ -20,7 +20,6 @@
                   <li><a href="{{ route('tlogistik') }}">Prodi Teknik Logistik</a></li>
                 </ul>
               </li>
-          <li><a href="#">Fasilitas Penunjang</a></li>
           <li><a href="{{ route('prestasi') }}">Prestasi Mahasiswa</a></li>
           <li><a href="https://teknik.unimal.ac.id/sifatek/wp-login.php?redirect_to=https%3A%2F%2Fteknik.unimal.ac.id%2Fsifatek%2Findex.php%2Flog-catatan-harian-tendik%2F&reauth=1">Tenaga Kependidikan</a></li>
         </ul>

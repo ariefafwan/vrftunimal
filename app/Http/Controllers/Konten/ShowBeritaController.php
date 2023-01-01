@@ -9,92 +9,206 @@ use Illuminate\Routing\Controller;
 
 class ShowBeritaController extends Controller
 {
-    public function sisteminformasi()
+    public function sisteminformasi(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '9');
         $prodi = Prodi::all()->where('id', '9');
+        $berita = Berita::all();
         $page = 'Berita Sistem Informasi';
-        $berita = Berita::all();
-        return view('kontens.berita.sisteminformasi', compact('news','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '9')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tsipil()
+    public function tsipil(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '2');
         $prodi = Prodi::all()->where('id', '2');
+        $berita = Berita::all();
         $page = 'Berita Teknik Sipil';
-        $berita = Berita::all();
-        return view('kontens.berita.tsipil', compact('news','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '2')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
+        
     }
 
-    public function tmesin()
+    public function tmesin(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '3');
         $prodi = Prodi::all()->where('id', '3');
+        $berita = Berita::all();
         $page = 'Berita Teknik Mesin';
-        $berita = Berita::all();
-        return view('kontens.berita.tmesin', compact('news','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '3')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tkimia()
+    public function tkimia(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '4');
         $prodi = Prodi::all()->where('id', '4');
+        $berita = Berita::all();
         $page = 'Berita Teknik Kimia';
-        $berita = Berita::all();
-        return view('kontens.berita.tkimia', compact('news','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '4')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tindustri()
+    public function tindustri(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '5');
         $prodi = Prodi::all()->where('id', '5');
-        $page = 'Berita Teknik Industri';
         $berita = Berita::all();
-        return view('kontens.berita.tindustri', compact('news','prodi', 'page', 'berita'));
+        $page = 'Berita Teknik Kimia';
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '5')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function telektro()
+    public function telektro(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '6');
         $prodi = Prodi::all()->where('id', '6');
+        $berita = Berita::all();
         $page = 'Berita Teknik Elektro';
-        $berita = Berita::all();
-        return view('kontens.berita.telektro', compact('news','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '6')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tinformatika()
+    public function tinformatika(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '7');
         $prodi = Prodi::all()->where('id', '7');
+        $berita = Berita::all();
         $page = 'Berita Teknik Informatika';
-        $berita = Berita::all();
-        return view('kontens.berita.tinformatika', compact('news','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '7')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
-    public function tarsitektur()
+    
+    public function tarsitektur(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '8');
         $prodi = Prodi::all()->where('id', '8');
+        $berita = Berita::all();
         $page = 'Berita Teknik Arsitektur';
-        $berita = Berita::all();
-        return view('kontens.berita.tarsitektur', compact('news','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '8')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tmaterial()
+    public function tmaterial(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '10');
         $prodi = Prodi::all()->where('id', '10');
-        $page = 'Berita Teknik Material';
         $berita = Berita::all();
-        return view('kontens.berita.tmaterial', compact('news','prodi', 'page', 'berita'));
+        $page = 'Berita Teknik Material';
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '10')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tlogistik()
+    public function tlogistik(Request $request)
     {
-        $news = Berita::all()->where('prodi_id', '11');
         $prodi = Prodi::all()->where('id', '11');
-        $page = 'Berita Teknik Logistik';
         $berita = Berita::all();
-        return view('kontens.berita.tlogistik', compact('news','prodi', 'page', 'berita'));
+        $page = 'Berita Teknik Logistik';
+        $pagination  = 12;
+        $news = Berita::where('prodi_id', '11')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('kontens.berita.show', compact('prodi', 'page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
+    
+    
 }
