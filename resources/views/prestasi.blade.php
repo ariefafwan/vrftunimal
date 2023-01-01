@@ -186,7 +186,6 @@
         <div class="container" data-aos="fade-up">
   
           <div class="section-title text-dark">
-            @foreach($prestasi as $index => $row)
             <h2>Prestasi Mahasiswa FT UNIMAL</h2>
             <table class="table table-light table-striped table-hover">
                 <thead>
@@ -201,6 +200,7 @@
                   </tr>
                 </thead>
                 <tbody>
+                  @foreach($prestasi as $index => $row)
                   <tr>
                     <th scope="row">{{ $index + 1 }}</th>
                     <td>{{ $row->mahasiswa }}</td>
@@ -209,10 +209,10 @@
                     <td>{{ $row->prestasi }}</td>
                     <td>{{ $row->tingkat }} / {{ $row->tahun }}</td>
                     <td>{{ $row->event }}</td>
-                    </tr>
+                  </tr>
+                  @endforeach
                 </tbody>
               </table>
-            @endforeach
           </div>
   
         </div>

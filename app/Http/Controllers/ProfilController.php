@@ -50,7 +50,7 @@ class ProfilController extends Controller
     public function visimisi()
     {
         $page = 'Visi Misi';
-        $visimisi = Visimisi::all()->where('prodi_id', '3');
+        $visimisi = Visimisi::all()->where('prodi_id', '1');
         $berita = Berita::all();
         return view('visimisi', compact('page', 'berita', 'visimisi'));   
     }
@@ -79,11 +79,24 @@ class ProfilController extends Controller
         return view('pimpinan', compact('page', 'berita', 'pimpinan'));   
     }
 
-    public function berita()
+    public function berita(Request $request)
     {
         $page = 'Berita';
         $berita = Berita::all();
-        return view('beritaall', compact('page', 'berita'));   
+        $pagination  = 9;
+        $news    = Berita::when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('title', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $news->appends($request->only('keyword'));
+
+        return view('beritaall', compact('page', 'berita'), [
+        'news' => $news,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
+        
     }
 
     public function kalender()

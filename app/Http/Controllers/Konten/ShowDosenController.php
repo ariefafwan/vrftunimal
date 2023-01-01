@@ -7,95 +7,208 @@ use App\Models\Dosen;
 use App\Models\Prodi;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Laravel\Ui\Presets\React;
 
 class ShowDosenController extends Controller
 {
-    public function sisteminformasi()
+    public function sisteminformasi(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '9');
         $prodi = Prodi::all()->where('id', '9');
-        $page = 'Dosen Sistem Informasi';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.sisteminformasi', compact('dosen','prodi', 'page', 'berita'));
+        $page = 'Dosen Sistem Informasi';
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '9')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tsipil()
+    public function tsipil(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '2');
         $prodi = Prodi::all()->where('id', '2');
         $page = 'Dosen Teknik Sipil';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tsipil', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '2')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
+        
     }
 
-    public function tmesin()
+    public function tmesin(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '3');
         $prodi = Prodi::all()->where('id', '3');
         $page = 'Dosen Teknik Mesin';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tmesin', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '3')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tkimia()
+    public function tkimia(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '4');
         $prodi = Prodi::all()->where('id', '4');
         $page = 'Dosen Teknik Kimia';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tkimia', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '4')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tindustri()
+    public function tindustri(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '5');
         $prodi = Prodi::all()->where('id', '5');
         $page = 'Dosen Teknik Industri';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tindustri', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '5')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function telektro()
+    public function telektro(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '6');
         $prodi = Prodi::all()->where('id', '6');
         $page = 'Dosen Teknik Elektro';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.telektro', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '6')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tinformatika()
+    public function tinformatika(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '7');
         $prodi = Prodi::all()->where('id', '7');
         $page = 'Dosen Teknik Informatika';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tinformatika', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '7')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
-    public function tarsitektur()
+    
+    public function tarsitektur(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '8');
         $prodi = Prodi::all()->where('id', '8');
         $page = 'Dosen Teknik Arsitektur';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tarsitektur', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '8')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tmaterial()
+    public function tmaterial(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '10');
         $prodi = Prodi::all()->where('id', '10');
         $page = 'Dosen Teknik Material';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tmaterial', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '10')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 
-    public function tlogistik()
+    public function tlogistik(Request $request)
     {
-        $dosen = Dosen::all()->where('prodi_id', '11');
         $prodi = Prodi::all()->where('id', '11');
-        $page = 'Dosen Teknik Logistik';
+        $page = 'Dosen Teknik Material';
         $berita = Berita::all();
-        return view('kontens.dosenprodi.tlogistik', compact('dosen','prodi', 'page', 'berita'));
+        $pagination  = 12;
+        $dosen = Dosen::where('prodi_id', '11')->when($request->keyword, function ($query) use ($request) {
+        
+            $query
+            ->where('name', 'like', "%{$request->keyword}%");
+            })->orderBy('created_at', 'desc')->paginate($pagination);
+
+        $dosen->appends($request->only('keyword'));
+
+        return view('kontens.dosenprodi.show', compact('prodi', 'page', 'berita'), [
+        'dosen' => $dosen,
+        
+        ])->with('i', ($request->input('page', 1) - 1) * $pagination);
     }
 }

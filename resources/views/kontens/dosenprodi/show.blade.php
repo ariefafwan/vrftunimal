@@ -183,6 +183,21 @@
             @endforeach
             <div class="row">
                 <!-- Dosen -->
+                <form action="{{ url()->current() }}"
+                  method="get">
+                  <div class="relative mx-auto mb-3">
+                    <input type="search"
+                      name="keyword"
+                      value="{{ request('keyword') }}"
+                      placeholder="Search ....."
+                      class="form-control w-25 d-inline block w-full pl-4 pr-10 text-sm leading-5 transition rounded-full shadow-sm border-secondary-300 bg-secondary-50 focus:bg-white focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                    <button type="submit"
+                      class="btn btn-primary">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </form>
+                @if ($dosen->count() > 0)
                 @php
                   $i = 1;
                 @endphp
@@ -205,6 +220,12 @@
                   $i++;
                 @endphp
                 @endforeach
+                  <div class="d-flex justify-content-center">
+                      {{ $dosen->links() }}
+                  </div>
+                @else
+                Belum Ada Data ...
+                @endif
           </div>
   
         </div>
